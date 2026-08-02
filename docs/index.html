@@ -1,0 +1,276 @@
+<meta charset='utf-8'><meta name='viewport' content='width=device-width, initial-scale=1'><title>Hemjakten · Kungsholmen · Vasastan · Södermalm</title>
+<style>
+  :root {
+    --bg:#f5f3ee; --surface:#fffefb; --ink:#23272b; --ink-soft:#5b6167; --line:#e0dcd2;
+    --accent:#0e9b8a; --accent-ink:#fff; --chip:#e7f3f1; --chip-ink:#0c6d61;
+    --warn:#b45309; --warn-bg:#fdf0e0;
+    --shadow:0 1px 2px rgba(30,30,30,.05), 0 6px 16px rgba(30,30,30,.06);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#14171a; --surface:#1d2125; --ink:#eef0f2; --ink-soft:#a2abb2; --line:#30363c;
+      --accent:#3fd0bd; --accent-ink:#0c1214; --chip:#17342f; --chip-ink:#6fe0d0;
+      --warn:#f0a75c; --warn-bg:#33270f;
+      --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.35); }
+  }
+  * { box-sizing:border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink);
+    font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; line-height:1.5;
+    -webkit-font-smoothing:antialiased; }
+  .wrap { max-width:1040px; margin:0 auto; padding:0 18px; }
+  header { position:sticky; top:0; z-index:10;
+    background:color-mix(in srgb, var(--bg) 88%, transparent); backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line); }
+  .head-inner { padding:18px 18px 14px; max-width:1040px; margin:0 auto; }
+  h1 { margin:0; font-size:1.5rem; font-weight:800; letter-spacing:-.02em; }
+  .sub { margin:3px 0 0; color:var(--ink-soft); font-size:.9rem; }
+  .sub b { color:var(--ink); font-variant-numeric:tabular-nums; }
+  .controls { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:13px; }
+  .filters { display:flex; flex-wrap:wrap; gap:6px; }
+  button.f, button.sort { font:inherit; font-size:.85rem; font-weight:600; padding:6px 13px;
+    border-radius:999px; border:1px solid var(--line); background:var(--surface);
+    color:var(--ink-soft); cursor:pointer; }
+  button.f:hover, button.sort:hover { border-color:var(--accent); color:var(--ink); }
+  button.f.on { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .right-btns { margin-left:auto; display:flex; gap:6px; flex-wrap:wrap; }
+  main { padding:20px 0 60px; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px; }
+  .card { display:flex; flex-direction:column; gap:8px; background:var(--surface);
+    border:1px solid var(--line); border-radius:14px; padding:15px 16px 16px;
+    color:inherit; box-shadow:var(--shadow); }
+  .card-top { display:flex; justify-content:space-between; align-items:center; gap:8px; }
+  .tags { display:flex; gap:5px; }
+  .tag { font-size:.68rem; font-weight:700; padding:2px 8px; border-radius:6px; letter-spacing:.02em; }
+  .tag.ny { background:var(--accent); color:var(--accent-ink); }
+  .tag.upc { background:var(--warn-bg); color:var(--warn); }
+  .dist { font-size:.7rem; font-weight:700; text-transform:uppercase; letter-spacing:.07em;
+    color:var(--chip-ink); background:var(--chip); padding:3px 9px; border-radius:6px; }
+  .price { font-size:1.25rem; font-weight:800; font-variant-numeric:tabular-nums; }
+  .price.upc { color:var(--warn); font-size:1.05rem; }
+  .addr { font-size:1rem; font-weight:650; line-height:1.3; }
+  .area { color:var(--ink-soft); font-size:.82rem; }
+  .meta { display:flex; flex-wrap:wrap; gap:4px 12px; color:var(--ink-soft); font-size:.82rem; }
+  .meta b { color:var(--ink); font-weight:600; }
+  .badges { display:flex; gap:6px; flex-wrap:wrap; }
+  .bdg { font-size:.74rem; padding:3px 9px; border-radius:999px; border:1px solid var(--line); color:var(--ink-soft); }
+  .bdg.yes { background:var(--chip); color:var(--chip-ink); border-color:transparent; font-weight:600; }
+  .links { display:flex; gap:12px; margin-top:auto; padding-top:6px; border-top:1px dashed var(--line); }
+  .links a { font-size:.85rem; font-weight:700; color:var(--accent); text-decoration:none; }
+  .links a:hover { text-decoration:underline; }
+  .empty { text-align:center; color:var(--ink-soft); padding:50px 20px; }
+  footer { border-top:1px solid var(--line); padding:22px 0 40px; color:var(--ink-soft); font-size:.8rem; }
+  footer p { margin:0 0 7px; }
+</style>
+<header><div class="head-inner">
+  <h1>Hemjakten 🏡</h1>
+  <p class="sub"><b id="count">120</b> lägenheter · max 6 mkr · minst 40 kvm · balkong ·
+    Hemnet + Booli (inkl. mäklarnas egna & kommande)</p>
+  <div class="controls">
+    <div class="filters" id="distFilters"></div>
+    <div class="filters">
+      <button class="f" id="fDm">✓ Diskmaskin</button>
+      <button class="f" id="fTm">✓ Tvättmaskin</button>
+      <button class="f" id="fUp">Dölj kommande</button>
+    </div>
+    <div class="right-btns"><button class="sort" id="sortBtn">Nyast först</button></div>
+  </div>
+</div></header>
+<main><div class="wrap">
+  <div class="grid" id="grid"></div>
+  <div class="empty" id="empty" hidden>Inget matchar filtren just nu.</div>
+</div></main>
+<footer><div class="wrap">
+  <p>Uppdaterad <b>2 August 2026</b>, automatiskt varje morgon. Booli bevakar de flesta mäklarsajter,
+    så mäklar-exklusiva objekt fångas den vägen.</p>
+  <p>✓-märken för diskmaskin/tvättmaskin läses ur annonstexten — en lägenhet kan ha dem utan att
+    texten nämner det, så okänd betyder inte nej. Balkong är hårt krav i sökningen.</p>
+</div></footer>
+<script>
+  const flats = [
+    { addr:"Möregatan 10", area:"Södermalm Katarina", dist:"Södermalm", price:null, fee:3093, kvm:46, rooms:2, floor:"vån 5", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/681065", burl:"https://connect-resolve.maklare.vitec.net/Description/S12038/OBJ5P9NHZ52GTSJL9TDB3/Booli", also:[{"src": "Booli", "url": "https://www.booli.se/annons/6156907"}] },
+    { addr:"Götgatan 106", area:"Södermalm", dist:"Södermalm", price:null, fee:3394, kvm:65, rooms:2, floor:"vån 5", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/4537927", burl:"https://www.erikolsson.se/homes/Lagenhet-2.5rum-Gotgatan-106-Stockholm-Stockholm-kommun-6007813", also:[] },
+    { addr:"Svarvargatan 10", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:3147, kvm:45, rooms:2, floor:"vån 5", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/756617", burl:"https://connect-resolve.maklare.vitec.net/Description/S13661/OBJ5PLRZ652MFWRG49XBZ/Booli", also:[] },
+    { addr:"Ekehjelmstorget 6", area:"Södermalm", dist:"Södermalm", price:null, fee:1850, kvm:55, rooms:2, floor:"", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/334039", burl:"https://connect-resolve.maklare.vitec.net/Description/M32413/OBJ5PKFWS83HCMGWVDXB8/Booli", also:[] },
+    { addr:"Sysslomansgatan 8", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:2508, kvm:41, rooms:1, floor:"vån 3", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/759241", burl:"https://connect-resolve.maklare.vitec.net/Description/S8437/OBJ5PHFLLS2GRZC7ZXDB8/Booli", also:[] },
+    { addr:"Industrigatan 7A", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:3325, kvm:42, rooms:2, floor:"vån 2", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6207845", burl:"https://connect-resolve.maklare.vitec.net/Description/S13590/OBJ5P7P9MQ2JFQ6VMQ7B6/Booli", also:[] },
+    { addr:"Hornsbergs Strand 23", area:"Västra Kungsholmen", dist:"Kungsholmen", price:4000000, fee:3583, kvm:51, rooms:2, floor:"vån 1", sqm:null, dm:true, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/4537229", burl:"https://diplomat.hazemalkhodary.com/redirectCollectionUrl?dealId=MDAxNXwwMDAwMDAwMzY5Nnw1OA..", also:[] },
+    { addr:"Norrbackagatan 49A", area:"Vasastan", dist:"Vasastan", price:null, fee:3837, kvm:45, rooms:2, floor:"vån 5", sqm:null, dm:null, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/4545151", burl:"https://www.wrede.se/objekt/1920139", also:[] },
+    { addr:"Kocksgatan 51", area:"Södermalm Sofia", dist:"Södermalm", price:null, fee:4426, kvm:49, rooms:2, floor:"vån 3,5", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/142675", burl:"https://connect-resolve.maklare.vitec.net/Description/S12038/OBJ5PMRGQM2GTSHNXSJB0/Booli", also:[] },
+    { addr:"Ninni Kronbergs gata 28", area:"Vasastan", dist:"Vasastan", price:null, fee:3336, kvm:47, rooms:2, floor:"vån 6", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/4516321", burl:"https://www.fastighetsbyran.com/sv/sverige/till-salu/stockholms-lan/stockholms-stad/objekt/?objektID=3519638", also:[] },
+    { addr:"Bergsundsgatan 19", area:"Södermalm", dist:"Södermalm", price:null, fee:4238, kvm:41, rooms:1, floor:"vån 5", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/418768", burl:"https://connect-resolve.maklare.vitec.net/Description/M17629/OBJ5NHD2942SHM4J36PBE/Booli", also:[] },
+    { addr:"John Ericssonsgatan 6", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:3183, kvm:45, rooms:2, floor:"vån 3", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/136201", burl:"https://connect-resolve.maklare.vitec.net/Description/S8437/CMBOLGH5H8QSMISI1PVBAAP/Booli", also:[] },
+    { addr:"Svedbergsplan 6", area:"Kungsholmen Marieberg", dist:"Kungsholmen", price:null, fee:3023, kvm:49, rooms:2, floor:"vån 6", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/4205053", burl:"https://www.husmanhagberg.se/objekt/annons/OBJ5PJK8DF2PN525ZSVBW", also:[] },
+    { addr:"Tegelviksgatan 22", area:"Södermalm Sofia", dist:"Södermalm", price:null, fee:4294, kvm:45, rooms:2, floor:"vån 2", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/4538414", burl:"https://connect-resolve.maklare.vitec.net/Description/S12038/OBJ5PLNSX32GTS2PKHKBY/Booli", also:[] },
+    { addr:"Wennerbergsgatan 6A", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:3333, kvm:47, rooms:2, floor:"vån 3", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/3877919", burl:"https://connect-resolve.maklare.vitec.net/Description/S13590/OBJ5PJNRSP2JFQTDXPHBF/Booli", also:[] },
+    { addr:"Norrtullsgatan 61", area:"Vasastan", dist:"Vasastan", price:null, fee:2449, kvm:46, rooms:1, floor:"vån 2", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6197833", burl:"https://connect-resolve.maklare.vitec.net/Description/M32714/OBJ5PCMK5X3HQDKDJN5BG/Booli", also:[] },
+    { addr:"Luntmakargatan 63", area:"Vasastan", dist:"Vasastan", price:null, fee:1980, kvm:46, rooms:2, floor:"vån 3", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6197395", burl:"https://www.fastighetsbyran.com/sv/sverige/till-salu/stockholms-lan/stockholms-stad/objekt/?objektID=3519474", also:[] },
+    { addr:"Birger Sjöbergs väg 3", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:2884, kvm:44, rooms:2, floor:"vån 3", sqm:null, dm:true, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6196949", burl:"https://www.skandiamaklarna.se/api/redirect/estate/MDMwM3wwMDAwMDQ2MDQ0OHw1OA../", also:[] },
+    { addr:"Lundagatan 50", area:"Södermalm Högalid", dist:"Södermalm", price:null, fee:2420, kvm:40, rooms:2, floor:"vån 2", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6196345", burl:"https://connect-resolve.maklare.vitec.net/Description/S12038/CMBOLGH5KKK0DQTDEH2J9MU/Booli", also:[] },
+    { addr:"Roslagsgatan 29A", area:"Vasastan", dist:"Vasastan", price:5795000, fee:4686, kvm:53, rooms:2, floor:"vån 1", sqm:null, dm:null, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/3959163", burl:"https://connect-resolve.maklare.vitec.net/Description/S12763/OBJ5PMDDN62LQTRB77KBY/Booli", also:[] },
+    { addr:"Nordenflychtsvägen 62", area:"Kungsholmen", dist:"Kungsholmen", price:5895000, fee:3708, kvm:62, rooms:2, floor:"vån 9", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/4011865", burl:"https://connect-resolve.maklare.vitec.net/Description/S8437/CMBOLGH4MKK6LBRFT6MUI1A/Booli", also:[] },
+    { addr:"Norr Mälarstrand 94", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:2438, kvm:41, rooms:2, floor:"vån 3", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6193519", burl:"https://connect-resolve.maklare.vitec.net/Description/S13989/OBJ5PKK5G42MTMV3VZ7BJ/Booli", also:[] },
+    { addr:"Ringvägen 87B", area:"Södermalm", dist:"Södermalm", price:null, fee:2520, kvm:50, rooms:2, floor:"vån 3", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/709957", burl:"https://connect-resolve.maklare.vitec.net/Description/M17629/OBJ5PFL5QR2SHMK5FTJB1/Booli", also:[] },
+    { addr:"Döbelnsgatan 69A", area:"Vasastan", dist:"Vasastan", price:null, fee:2047, kvm:40, rooms:2, floor:"vån 4", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/344166", burl:"https://www.erikolsson.se/bostader-till-salu/OBJ5PHKC5C2S7NCBHGVBC", also:[] },
+    { addr:"Fatburs Kvarngata 14", area:"Sofia", dist:"Södermalm", price:null, fee:5510, kvm:54, rooms:1, floor:"", sqm:null, dm:true, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/572357", burl:"https://www.fastighetsbyran.com/sv/sverige/till-salu/stockholms-lan/stockholms-stad/objekt/?objektID=3496924", also:[] },
+    { addr:"Rålambsvägen 69", area:"Fredhäll", dist:"Kungsholmen", price:null, fee:3931, kvm:47, rooms:2, floor:"vån 5", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/400559", burl:"https://connect-resolve.maklare.vitec.net/Description/M12730/OBJ12730_2104114007/Booli", also:[] },
+    { addr:"Kristinebergsvägen 42", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:3710, kvm:61, rooms:2, floor:"vån 4", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6186371", burl:"https://connect-resolve.maklare.vitec.net/Description/M22127/OBJ5PG2K6X32897LKBTB7/Booli", also:[] },
+    { addr:"Stagneliusvägen 38", area:"Kungsholmen Fredhäll", dist:"Kungsholmen", price:null, fee:3481, kvm:44, rooms:2, floor:"vån 2", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/745464", burl:"https://www.husmanhagberg.se/objekt/annons/OBJ5PBWZ272PN597245B5", also:[] },
+    { addr:"Siargatan 9", area:"Södermalm", dist:"Södermalm", price:null, fee:3210, kvm:62, rooms:2, floor:"vån 1", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/3954014", burl:"https://connect-resolve.maklare.vitec.net/Description/M22127/OBJ5PFLB763289SX3T7B1/Booli", also:[] },
+    { addr:"Stagneliusvägen 30", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:4175, kvm:48, rooms:2, floor:"vån 2", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/745394", burl:"https://www.skandiamaklarna.se/api/redirect/estate/MDMwM3wwMDAwMDQ1NzU0N3w1OA../", also:[] },
+    { addr:"Åsögatan 192", area:"Södermalm", dist:"Södermalm", price:null, fee:2923, kvm:44, rooms:2, floor:"vån 5", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/418930", burl:"https://connect-resolve.maklare.vitec.net/Description/M17629/OBJ5P42RZZ2SHMNJTXRB9/Booli", also:[] },
+    { addr:"Bondegatan 95", area:"Södermalm", dist:"Södermalm", price:null, fee:3601, kvm:54, rooms:2, floor:"vån 7", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/4395570", burl:"https://connect-resolve.maklare.vitec.net/Description/M17291/OBJ5P4BQQS2S3KRTKQBB2/Booli", also:[] },
+    { addr:"Warfvinges väg 23", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:2700, kvm:46, rooms:2, floor:"vån 8", sqm:null, dm:true, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6180273", burl:"https://diplomat.hazemalkhodary.com/redirectCollectionUrl?dealId=MDAxNXwwMDAwMDAwMzY3NXw1OA..", also:[] },
+    { addr:"Fridhemsgatan 41", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:1549, kvm:41, rooms:1, floor:"vån 3", sqm:null, dm:true, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/144072", burl:"https://connect-resolve.maklare.vitec.net/Description/M22127/OBJ5PC3CFM3289FVJPGB5/Booli", also:[] },
+    { addr:"Stagneliusvägen 23", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:4191, kvm:47, rooms:2, floor:"vån 5", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/745320", burl:"https://connect-resolve.maklare.vitec.net/Description/S13661/CMBOLGH5M4JKKF9HPBE37QN/Booli", also:[] },
+    { addr:"Gävlegatan 26", area:"Vasastan", dist:"Vasastan", price:null, fee:2310, kvm:42, rooms:2, floor:"", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6028606", burl:"https://connect-resolve.maklare.vitec.net/Description/S12245/CMBOLGH5H436UEOR1B0LIHM/Booli", also:[] },
+    { addr:"Lustgårdsgatan 1", area:"Kungsholmen", dist:"Kungsholmen", price:4995000, fee:4536, kvm:60, rooms:3, floor:"vån 2", sqm:null, dm:true, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/4005972", burl:"https://diplomat.hazemalkhodary.com/redirectCollectionUrl?dealId=MDAxNXwwMDAwMDAwMzY2Nnw1OA..", also:[] },
+    { addr:"Sonja Kovalevskys gata 11", area:"Vasastan", dist:"Vasastan", price:null, fee:2530, kvm:46, rooms:2, floor:"vån 4", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6174224", burl:"https://connect-resolve.maklare.vitec.net/Description/M22127/OBJ5PHQK8R3289SRP69B8/Booli", also:[] },
+    { addr:"Sonja Kovalevskys gata 3", area:"Vasastan", dist:"Vasastan", price:null, fee:2695, kvm:49, rooms:2, floor:"vån 3", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/4041326", burl:"https://connect-resolve.maklare.vitec.net/Description/M14499/OBJ14499_2054968787/Booli", also:[] },
+    { addr:"Kungsbro Strand 17", area:"Kungsholmen", dist:"Kungsholmen", price:3995000, fee:5149, kvm:40, rooms:2, floor:"", sqm:null, dm:true, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6170457", burl:"https://www.maklarhuset.se/bostad/sverige/stockholm/stockholm/kungsbro-strand/663357", also:[] },
+    { addr:"Norrtullsgatan 36", area:"Vasastan", dist:"Vasastan", price:null, fee:3490, kvm:48, rooms:3, floor:"vån 5", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/5953598", burl:"https://www.svenskfast.se/bostadsratt/stockholm/stockholm/stockholm/vasastan/norrtullsgatan-36/443534/", also:[] },
+    { addr:"Celsiusgatan 8", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:2529, kvm:44, rooms:2, floor:"", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/582970", burl:"https://aliciaedelman.se/bostad/lagenhet/celsiusgatan-8-stockholm-obj5pgkpvg2l8ncxbksba", also:[] },
+    { addr:"Gotlandsgatan 37", area:"Södermalm", dist:"Södermalm", price:null, fee:5464, kvm:62, rooms:3, floor:"vån 2", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/153638", burl:"https://connect-resolve.maklare.vitec.net/Description/M32413/OBJ5P72XV73HCMNM6BGBH/Booli", also:[] },
+    { addr:"Rålambsvägen 52", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:2952, kvm:41, rooms:2, floor:"vån 1", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6162277", burl:"https://connect-resolve.maklare.vitec.net/Description/M22127/OBJ5PG2JS332897LKBKBX/Booli", also:[] },
+    { addr:"Marmorgatan 5", area:"Södermalm", dist:"Södermalm", price:null, fee:4620, kvm:53, rooms:2, floor:"vån 3", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/672233", burl:"https://www.erikolsson.se/bostader-till-salu/OBJ20341_2145012348", also:[] },
+    { addr:"Fatburs Kvarngata 24", area:"Södermalm", dist:"Södermalm", price:null, fee:4658, kvm:59, rooms:2, floor:"vån 2", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/572537", burl:"https://www.maklarhuset.se/bostad/sverige/stockholm/stockholm/fatburs-kvarngata/667169", also:[] },
+    { addr:"Sonja Kovalevskys gata 3", area:"Vasastan", dist:"Vasastan", price:null, fee:2640, kvm:48, rooms:2, floor:"vån 5", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6158355", burl:"https://connect-resolve.maklare.vitec.net/Description/M22127/OBJ5PDGLT43289KGJQCBC/Booli", also:[] },
+    { addr:"Lustgårdsgatan 20", area:"Kungsholmen", dist:"Kungsholmen", price:4495000, fee:2700, kvm:46, rooms:2, floor:"vån 8", sqm:null, dm:true, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6158320", burl:"https://diplomat.hazemalkhodary.com/redirectCollectionUrl?dealId=MDAxNXwwMDAwMDAwMzY2MXw1OA..", also:[] },
+    { addr:"Lottens gata 11", area:"Södermalm", dist:"Södermalm", price:null, fee:3555, kvm:44, rooms:2, floor:"vån 4", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/4511960", burl:"https://www.husmanhagberg.se/objekt/annons/OBJ5PHFNSN3DVKJ7JJDBY", also:[] },
+    { addr:"Hagaesplanaden 75", area:"Vasastan", dist:"Vasastan", price:null, fee:2913, kvm:41, rooms:2, floor:"vån 8", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/4515382", burl:"https://connect-resolve.maklare.vitec.net/Description/S12123/CMBOLGH5KBBULR1DS3CTAEO/Booli", also:[] },
+    { addr:"Sågargatan 14", area:"Södermalm", dist:"Södermalm", price:null, fee:3531, kvm:43, rooms:2, floor:"vån 1", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6155023", burl:"https://www.svenskfast.se/bostadsratt/stockholm/stockholm/stockholm/sodermalm/sofia/sagargatan-14/462401/", also:[] },
+    { addr:"Lindhagensgatan 63", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:4433, kvm:46, rooms:2, floor:"vån 1,5", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6126636", burl:"https://connect-resolve.maklare.vitec.net/Description/M32714/OBJ5PCHNSM3HQDR5582BD/Booli", also:[] },
+    { addr:"Roslagsgatan", area:"Vasastan", dist:"Vasastan", price:null, fee:2300, kvm:50, rooms:2, floor:"vån 4", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6153089", burl:"https://connect-resolve.maklare.vitec.net/Description/S13988/OBJ5PGW7TM2MTLN9FX4BG/Booli", also:[] },
+    { addr:"Högalidsgatan 34B", area:"Södermalm", dist:"Södermalm", price:null, fee:2736, kvm:41, rooms:2, floor:"vån 2", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6152307", burl:"https://connect-resolve.maklare.vitec.net/Description/S12038/CMBOLGH5KR3N6LJ15N2PEJ8/Booli", also:[] },
+    { addr:"Ernst Ahlgrens väg 4", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:3011, kvm:43, rooms:2, floor:"vån 1", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6098866", burl:"https://connect-resolve.maklare.vitec.net/Description/M22127/OBJ5P7JWN83289FRSFKBH/Booli", also:[] },
+    { addr:"Åsögatan 194", area:"Södermalm", dist:"Södermalm", price:null, fee:3051, kvm:50, rooms:2, floor:"vån 3", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/796842", burl:"https://connect-resolve.maklare.vitec.net/Description/M32413/OBJ5PCRVS73HCMTR4N8BE/Booli", also:[] },
+    { addr:"Norrtullsgatan 38", area:"Vasastan", dist:"Vasastan", price:null, fee:3786, kvm:54, rooms:2, floor:"vån 4", sqm:null, dm:true, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6143348", burl:"https://connect-resolve.maklare.vitec.net/Description/M18480/OBJ5PCVK572TL2HFS6SBJ/Booli", also:[] },
+    { addr:"Love Almqvists väg 4B", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:4313, kvm:44, rooms:2, floor:"vån 2", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/371929", burl:"https://connect-resolve.maklare.vitec.net/Description/S13989/CMBOLGH5OIR7AB21VV6HBJM/Booli", also:[] },
+    { addr:"Lustgårdsgatan 14", area:"Kungsholmen", dist:"Kungsholmen", price:4195000, fee:2700, kvm:46, rooms:2, floor:"vån 2", sqm:null, dm:true, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6139779", burl:"https://diplomat.hazemalkhodary.com/redirectCollectionUrl?dealId=MDAxNXwwMDAwMDAwMzY1Mnw1OA..", also:[] },
+    { addr:"Kellgrensgatan 18", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:3082, kvm:42, rooms:1, floor:"vån 5", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/485457", burl:"https://connect-resolve.maklare.vitec.net/Description/M22127/OBJ5PCN2HR328958J3PBQ/Booli", also:[] },
+    { addr:"Sveavägen 136", area:"Vasastan", dist:"Vasastan", price:null, fee:2560, kvm:49, rooms:2, floor:"vån 3", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/757299", burl:"https://connect-resolve.maklare.vitec.net/Description/S12763/CMBOLGH5OF2HJM2EGPLG1JH/Booli", also:[] },
+    { addr:"Kungsholmsgatan 13", area:"Kungsholmen", dist:"Kungsholmen", price:4995000, fee:6255, kvm:50, rooms:2, floor:"vån 3", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/642295", burl:"https://connect-resolve.maklare.vitec.net/Description/S13989/OBJ5P7Q76M2MTM7R8BJBZ/Booli", also:[] },
+    { addr:"Götgatan 96", area:"Södermalm", dist:"Södermalm", price:null, fee:2283, kvm:58, rooms:2, floor:"vån 2", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6127523", burl:"https://connect-resolve.maklare.vitec.net/Description/M22127/OBJ5P8XJ5P3289DBQGXBA/Booli", also:[] },
+    { addr:"Fridhemsgatan 14A", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:3322, kvm:41, rooms:2, floor:"vån 5", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/142789", burl:"https://connect-resolve.maklare.vitec.net/Description/S13989/OBJ5PCDP5S2MTMLQQ82BZ/Booli", also:[] },
+    { addr:"Orvar Odds väg 4", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:2977, kvm:41, rooms:1, floor:"vån 1", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6107722", burl:"https://connect-resolve.maklare.vitec.net/Description/M18440/OBJ5P6QVM32TJLXZZXPBF/Booli", also:[] },
+    { addr:"Sysslomansgatan 26", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:3299, kvm:41, rooms:2, floor:"vån 7", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/759219", burl:"https://connect-resolve.maklare.vitec.net/Description/S13989/OBJ5PBHM6Z2MTMQGHPBBR/Booli", also:[] },
+    { addr:"Ringvägen 84", area:"Stockholm – Södermalm", dist:"Södermalm", price:null, fee:2076, kvm:47, rooms:2, floor:"vån 2", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/709846", burl:"https://connect-resolve.maklare.vitec.net/Description/S12565/OBJ5P8KGZG2LFN6DMLFBB/Booli", also:[] },
+    { addr:"Vindragarvägen 2", area:"Södermalm", dist:"Södermalm", price:5995000, fee:4081, kvm:60, rooms:2, floor:"vån 1", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/3967459", burl:"https://connect-resolve.maklare.vitec.net/Description/S8090/OBJ5PBNDLL2GRV5T5MBB1/Booli", also:[] },
+    { addr:"Högbergsgatan 24", area:"Södermalm", dist:"Södermalm", price:null, fee:2746, kvm:45, rooms:2, floor:"vån 3", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/444111", burl:"https://connect-resolve.maklare.vitec.net/Description/M32413/OBJ5P7KPT23HCMNL62BBP/Booli", also:[] },
+    { addr:"Franzéngatan 16", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:4075, kvm:65, rooms:2, floor:"vån 4", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/4537147", burl:"https://connect-resolve.maklare.vitec.net/Description/S13661/CMBOLGH5L7KF4F21FOUE2LI/Booli", also:[] },
+    { addr:"Nina Einhorns gata 1", area:"Hagastaden", dist:"Vasastan", price:null, fee:2813, kvm:42, rooms:2, floor:"vån 8", sqm:null, dm:true, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/4106161", burl:"https://connect-resolve.maklare.vitec.net/Description/M32714/OBJ5NW2M4D3HQDQFNB8BB/Booli", also:[] },
+    { addr:"Lindhagensgatan 75", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:4086, kvm:76, rooms:2, floor:"vån 1", sqm:null, dm:null, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/394040", burl:"https://connect-resolve.maklare.vitec.net/Description/M32460/OBJ5P8SL8S3HFBCGHQXBN/Booli", also:[] },
+    { addr:"Wollmar Yxkullsgatan 52B", area:"Södermalm Maria", dist:"Södermalm", price:null, fee:2388, kvm:40, rooms:2, floor:"vån 1", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/795821", burl:"https://connect-resolve.maklare.vitec.net/Description/S12038/CMBOLGH5KSIN5PM76H9G060/Booli", also:[] },
+    { addr:"Ulriksborgsgatan 7", area:"Kungsholmen", dist:"Kungsholmen", price:5395000, fee:4126, kvm:59, rooms:2, floor:"vån 16", sqm:null, dm:true, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6075211", burl:"https://diplomat.hazemalkhodary.com/redirectCollectionUrl?dealId=MDAxNXwwMDAwMDAwMzU4OXw1OA..", also:[] },
+    { addr:"Södermannagatan 8", area:"Södermalm", dist:"Södermalm", price:null, fee:1972, kvm:45, rooms:2, floor:"vån 4", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6044637", burl:"https://connect-resolve.maklare.vitec.net/Description/S12245/OBJ5NXNZXG37NKGKJK7B0/Booli", also:[] },
+    { addr:"Ernst Ahlgrens väg 10", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:2952, kvm:41, rooms:2, floor:"vån 1", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/566505", burl:"https://connect-resolve.maklare.vitec.net/Description/S13590/CMBOLGH5OVJ8V4E1VBRBDUF/Booli", also:[] },
+    { addr:"Fatburs Kvarngata 4", area:"Södermalm", dist:"Södermalm", price:null, fee:6333, kvm:62, rooms:3, floor:"vån 1", sqm:null, dm:true, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6057999", burl:"https://www.skandiamaklarna.se/api/redirect/estate/MDMwM3wwMDAwMDQ1MzE5OXw1OA../", also:[] },
+    { addr:"Repslagargatan 25", area:"Södermalm", dist:"Södermalm", price:null, fee:1958, kvm:47, rooms:2, floor:"vån 4", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/127538", burl:"https://connect-resolve.maklare.vitec.net/Description/M22127/OBJ5NXTWNV3289LHJKJBR/Booli", also:[] },
+    { addr:"Kungsholms Kyrkoplan 6", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:2988, kvm:47, rooms:2, floor:"vån 6", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/423036", burl:"https://connect-resolve.maklare.vitec.net/Description/S11519/OBJ5P24DQ532L5ZZ4CTBV/Booli", also:[] },
+    { addr:"Frejgatan 16", area:"Vasastan", dist:"Vasastan", price:null, fee:2000, kvm:43, rooms:2, floor:"vån 2", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/305911", burl:"https://connect-resolve.maklare.vitec.net/Description/M21183/OBJ5NZWXK82Z2KJFFXZBA/Booli", also:[] },
+    { addr:"Bondegatan 24", area:"Södermalm Sofia", dist:"Södermalm", price:null, fee:2949, kvm:42, rooms:2, floor:"vån 2", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/337768", burl:"https://connect-resolve.maklare.vitec.net/Description/S12038/CMBOLGH5OQIEPMF98J94SJF/Booli", also:[] },
+    { addr:"Hornsbergs Strand 85", area:"Kungsholmen", dist:"Kungsholmen", price:5995000, fee:3803, kvm:65, rooms:2, floor:"vån 3", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6039507", burl:"https://www.diplomatmakleri.se/listing/hornsbergs-strand-85-zu4nxw1o", also:[] },
+    { addr:"Sysslomansgatan 11", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:2580, kvm:43, rooms:2, floor:"vån 6", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/759060", burl:"https://www.bjurfors.se/visabostad/CMBOLGH5OIJE7JG06GMP9UK", also:[] },
+    { addr:"Rålambsvägen 50", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:3163, kvm:43, rooms:2, floor:"vån 2", sqm:null, dm:true, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/463126", burl:"https://connect-resolve.maklare.vitec.net/Description/S13989/CMBOLGH5MLB847HJDLMATS8/Booli", also:[] },
+    { addr:"Lindhagensterrassen 27", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:3306, kvm:59, rooms:2, floor:"vån 7", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6026772", burl:"https://www.diplomatmakleri.se/listing/lindhagensterrassen-27-zu2nnw1o", also:[] },
+    { addr:"Wargentinsgatan 3", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:2720, kvm:44, rooms:2, floor:"vån 5", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/97966", burl:"https://connect-resolve.maklare.vitec.net/Description/S13661/CMBOLGH5OB48AVQ7145LU7S/Booli", also:[] },
+    { addr:"Tavastgatan 37", area:"Södermalm", dist:"Södermalm", price:null, fee:2182, kvm:42, rooms:2, floor:"vån 0,5", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/763817", burl:"https://connect-resolve.maklare.vitec.net/Description/M32413/OBJ5NPRSF73HCM2SJPHB6/Booli", also:[] },
+    { addr:"Hornsbergs Strand 21", area:"Västra Kungsholmen", dist:"Kungsholmen", price:5595000, fee:4076, kvm:58, rooms:2, floor:"vån 16", sqm:null, dm:true, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/4537301", burl:"https://diplomat.hazemalkhodary.com/redirectCollectionUrl?dealId=MDAxNXwwMDAwMDAwMzU2OXw1OA..", also:[] },
+    { addr:"Warfvinges väg 23", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:3593, kvm:43, rooms:2, floor:"vån 8", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/6021133", burl:"https://www.diplomatmakleri.se/listing/warfvinges-vag-23-van-8-zu1nhw1o", also:[] },
+    { addr:"Stagneliusvägen 26", area:"Kungsholmen", dist:"Kungsholmen", price:null, fee:4064, kvm:47, rooms:2, floor:"vån 1", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/745348", burl:"https://connect-resolve.maklare.vitec.net/Description/M12730/OBJ5NHVR3T2L8N8P5TWBH/Booli", also:[] },
+    { addr:"Sveavägen 136", area:"Vasastan", dist:"Vasastan", price:null, fee:1834, kvm:44, rooms:2, floor:"vån 2", sqm:null, dm:null, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/5731705", burl:"https://fastighetsmaklarna.se/till-salu/sveavagen-136-2tr-mdc1m3wwmdawmdawoduxnhw1oa../", also:[] },
+    { addr:"Lundagatan 42B", area:"Södermalm", dist:"Södermalm", price:null, fee:2162, kvm:43, rooms:2, floor:"vån 0,5", sqm:null, dm:null, tm:null, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/annons/5995493", burl:"https://www.bosthlm.se/1927835/lundagatan-42b-1927835", also:[] },
+    { addr:"Slipgatan 9", area:"Södermalm", dist:"Södermalm", price:null, fee:2714, kvm:44, rooms:2, floor:"vån 3", sqm:null, dm:true, tm:true, up:true, isnew:true, seen:"2026-08-02", src:"Booli", url:"https://www.booli.se/bostad/739618", burl:"https://connect-resolve.maklare.vitec.net/Description/M32413/OBJ5NR326S3HCMSG8V6BT/Booli", also:[] },
+    { addr:"Krukmakargatan 51", area:"Stockholm", dist:"", price:5095000, fee:3124, kvm:48, rooms:2, floor:"vån 1/3", sqm:106146, dm:null, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-stockholms-kommun-krukmakargatan-51-21761667", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/643033"}] },
+    { addr:"Tengdahlsgatan 49", area:"Stockholm", dist:"", price:4695000, fee:5172, kvm:57, rooms:2, floor:"vån 0/6", sqm:82368, dm:true, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2,5rum-stockholm-stockholms-kommun-tengdahlsgatan-49-21760891", burl:"", also:[] },
+    { addr:"Lidnersplan 12", area:"Kungsholmen - Kristineberg", dist:"Kungsholmen", price:3795000, fee:3281, kvm:44, rooms:1, floor:"vån 1", sqm:86250, dm:null, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-1,5rum-kungsholmen-kristineberg-stockholms-kommun-lidnersplan-12-21761665", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/498782"}, {"src": "Booli", "url": "https://www.booli.se/bostad/498769"}] },
+    { addr:"Götgatan 90A", area:"Södermalm - Katarina Sofia", dist:"Södermalm", price:3995000, fee:null, kvm:42, rooms:1, floor:"vån 1", sqm:95119, dm:null, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-1,5rum-sodermalm-katarina-sofia-stockholms-kommun-gotgatan-90a-21487396", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/313459"}] },
+    { addr:"Folkungagatan 71, högst upp", area:"Södermalm", dist:"Södermalm", price:5195000, fee:1779, kvm:55, rooms:2, floor:"vån 5/5", sqm:93604, dm:null, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-stockholms-kommun-folkungagatan-71,-hogst-upp-21761562", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/148166"}] },
+    { addr:"Kungstensgatan 44", area:"Vasastan - Tegnérlunden", dist:"Vasastan", price:5795000, fee:1201, kvm:47, rooms:2, floor:"vån 5/7", sqm:123298, dm:null, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-vasastan-tegnerlunden-stockholms-kommun-kungstensgatan-44-21753520", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/648053"}] },
+    { addr:"Pokalvägen 5", area:"Reimersholme", dist:"Södermalm", price:5995000, fee:4474, kvm:58, rooms:2, floor:"vån 6/7", sqm:103362, dm:null, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-reimersholme-stockholms-kommun-pokalvagen-5-21747655", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/annons/6175453"}] },
+    { addr:"Celsiusgatan 4", area:"Kungsholmen", dist:"Kungsholmen", price:4695000, fee:2720, kvm:45, rooms:2, floor:"vån 1/4", sqm:104333, dm:null, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-stockholms-kommun-celsiusgatan-4-21761350", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/582960"}] },
+    { addr:"Rålambsvägen 29, 4 Tr", area:"Kungsholmen - Marieberg", dist:"Kungsholmen", price:4795000, fee:3341, kvm:53, rooms:2, floor:"vån 4", sqm:90472, dm:true, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-marieberg-stockholms-kommun-ralambsvagen-29,-4-tr-21760945", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/715277"}] },
+    { addr:"Tegelviksgatan 73", area:"Södermalm", dist:"Södermalm", price:5295000, fee:5020, kvm:62, rooms:2, floor:"vån 1/8", sqm:85403, dm:true, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-stockholms-kommun-tegelviksgatan-73-21761092", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/20733"}] },
+    { addr:"Bergsgatan 20", area:"Kungsholmen - Kungsholmstorg", dist:"Kungsholmen", price:4995000, fee:2440, kvm:47, rooms:2, floor:"vån 1,5/4", sqm:106277, dm:null, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-kungsholmstorg-stockholms-kommun-bergsgatan-20-21760817", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/576462"}] },
+    { addr:"Fatburs kvarngata 18, 5tr. Högst upp i huset", area:"Södermalm - Södra Station", dist:"Södermalm", price:4450000, fee:4043, kvm:50, rooms:2, floor:"vån 5/5", sqm:89000, dm:null, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-sodra-station-stockholms-kommun-fatburs-kvarngata-18,-5tr,-hogst-upp-i-huset-21742745", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/572577"}] },
+    { addr:"Vegagatan 13A, gårdshus", area:"Vasastan", dist:"Vasastan", price:5995000, fee:2946, kvm:52, rooms:2, floor:"", sqm:115288, dm:null, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-vasastan-stockholms-kommun-vegagatan-13a,-gardshus-21760716", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/4034632"}] },
+    { addr:"Nordenflychtsvägen 66", area:"Stockholm", dist:"", price:4095000, fee:3653, kvm:41, rooms:2, floor:"vån 5", sqm:99878, dm:null, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-stockholms-kommun-nordenflychtsvagen-66-21732702", burl:"", also:[] },
+    { addr:"Kellgrensgatan", area:"Stockholm", dist:"", price:4195000, fee:3629, kvm:44, rooms:2, floor:"vån 3", sqm:95341, dm:true, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-stockholms-kommun-kellgrensgatan-21714259", burl:"", also:[] },
+    { addr:"Kellgrensgatan", area:"Stockholm", dist:"", price:4645000, fee:3751, kvm:47, rooms:2, floor:"vån 7", sqm:98830, dm:true, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-stockholms-kommun-kellgrensgatan-21723069", burl:"", also:[] },
+    { addr:"Pipersgatan 16", area:"Kungsholmen", dist:"Kungsholmen", price:4295000, fee:5571, kvm:43, rooms:2, floor:"vån 2", sqm:98736, dm:true, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-stockholms-kommun-pipersgatan-16-21759305", burl:"", also:[] },
+    { addr:"Bergsunds Strand 5", area:"Södermalm/Högalid", dist:"Södermalm", price:4695000, fee:3537, kvm:40, rooms:1, floor:"vån 2/6", sqm:117375, dm:null, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-1,5rum-sodermalm-hogalid-stockholms-kommun-bergsunds-strand-5-21746507", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/3886562"}] },
+    { addr:"Sankt Göransgatan 143F, 1406", area:"Kungsholmen - Stadshagen", dist:"Kungsholmen", price:5295000, fee:3155, kvm:44, rooms:2, floor:"vån 4/8", sqm:120341, dm:null, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-stadshagen-stockholms-kommun-sankt-goransgatan-143f,-1406-21727273", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/4529327"}, {"src": "Booli", "url": "https://www.booli.se/bostad/4529364"}] },
+    { addr:"Nordenflychtsvägen 78", area:"Kungsholmen - Hornsbergs Strand", dist:"Kungsholmen", price:4795000, fee:3448, kvm:55, rooms:2, floor:"vån 1", sqm:87182, dm:null, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-hornsbergs-strand-stockholms-kommun-nordenflychtsvagen-78-21758988", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/4537189"}] },
+    { addr:"Kellgrensgatan 10, 2 tr", area:"Kungsholmen", dist:"Kungsholmen", price:4495000, fee:4547, kvm:52, rooms:2, floor:"vån 2/14", sqm:85619, dm:null, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-stockholms-kommun-kellgrensgatan-10,-2-tr-21735782", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/annons/6146173"}, {"src": "Booli", "url": "https://www.booli.se/annons/6074802"}] },
+    { addr:"Atterbomsvägen 58", area:"Kungsholmen - Fredhäll", dist:"Kungsholmen", price:3895000, fee:3323, kvm:42, rooms:2, floor:"vån 4/5", sqm:92738, dm:null, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-fredhall-stockholms-kommun-atterbomsvagen-58-21759049", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/138620"}] },
+    { addr:"Nordenflychtsvägen 62, vån 5", area:"Lindhagen", dist:"Kungsholmen", price:4895000, fee:3355, kvm:55, rooms:2, floor:"vån 5/13", sqm:89000, dm:null, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-lindhagen-stockholms-kommun-nordenflychtsvagen-62,-van-5-21757774", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/4011840"}] },
+    { addr:"Emelies gata 10", area:"Södermalm", dist:"Södermalm", price:5795000, fee:3833, kvm:44, rooms:2, floor:"vån 4", sqm:131705, dm:null, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-stockholms-kommun-emelies-gata-10-21709535", burl:"", also:[] },
+    { addr:"Kungsholmsgatan 11", area:"Kungsholmen", dist:"Kungsholmen", price:5495000, fee:7241, kvm:59, rooms:2, floor:"vån 3/7", sqm:93136, dm:null, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-stockholms-kommun-kungsholmsgatan-11-21725788", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/500806"}] },
+    { addr:"Fatburs Kvarngata 28", area:"Södermalm - Maria Högalid", dist:"Södermalm", price:4000000, fee:3903, kvm:48, rooms:1, floor:"", sqm:83333, dm:null, tm:true, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-1,5rum-sodermalm-maria-hogalid-stockholms-kommun-fatburs-kvarngata-28-21687583", burl:"", also:[{"src": "Booli", "url": "https://www.booli.se/bostad/572435"}] },
+    { addr:"Bergsundsgatan 16", area:"Södermalm - Hornstull", dist:"Södermalm", price:4500000, fee:3766, kvm:47, rooms:1, floor:"", sqm:95745, dm:null, tm:null, up:false, isnew:true, seen:"2026-08-02", src:"Hemnet", url:"https://www.hemnet.se/bostad/lagenhet-1rum-sodermalm-hornstull-stockholms-kommun-bergsundsgatan-16-21409209", burl:"", also:[] },
+  ];
+  let dist = "Alla", needDm = false, needTm = false, hideUp = false, sortNew = true;
+  const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g,
+    c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
+  const safeUrl = u => /^https?:\/\//i.test(u) ? u : "#";
+  const kr = n => n.toLocaleString("sv-SE") + " kr";
+
+  const distEl = document.getElementById("distFilters");
+  ["Alla", "Kungsholmen", "Vasastan", "Södermalm"].forEach(d => {
+    const b = document.createElement("button");
+    b.className = "f" + (d === "Alla" ? " on" : "");
+    b.textContent = d;
+    b.onclick = () => { dist = d;
+      distEl.querySelectorAll("button").forEach(x => x.classList.toggle("on", x.textContent === d));
+      render(); };
+    distEl.appendChild(b);
+  });
+  const toggle = (id, set) => { const b = document.getElementById(id);
+    b.onclick = () => { b.classList.toggle("on"); set(b.classList.contains("on")); render(); }; };
+  toggle("fDm", v => needDm = v);
+  toggle("fTm", v => needTm = v);
+  toggle("fUp", v => hideUp = v);
+  const sortBtn = document.getElementById("sortBtn");
+  sortBtn.onclick = () => { sortNew = !sortNew;
+    sortBtn.textContent = sortNew ? "Nyast först" : "Pris: lägst först ↑"; render(); };
+
+  function render() {
+    const grid = document.getElementById("grid");
+    let list = flats.filter(f =>
+      (dist === "Alla" || f.dist === dist) &&
+      (!needDm || f.dm) && (!needTm || f.tm) && (!hideUp || !f.up));
+    list.sort(sortNew
+      ? (a, b) => (b.seen + (b.isnew ? "1" : "0")).localeCompare(a.seen + (a.isnew ? "1" : "0"))
+      : (a, b) => (a.price ?? 1e9) - (b.price ?? 1e9));
+    grid.innerHTML = list.map(f => `
+      <div class="card">
+        <div class="card-top">
+          <span class="dist">${esc(f.dist || f.area)}</span>
+          <span class="tags">
+            ${f.isnew ? '<span class="tag ny">NY</span>' : ""}
+            ${f.up ? '<span class="tag upc">KOMMANDE</span>' : ""}
+          </span>
+        </div>
+        <div class="price${f.up && !f.price ? " upc" : ""}">${f.price ? esc(kr(f.price)) : "Pris ej satt"}</div>
+        <div class="addr">${esc(f.addr)}</div>
+        <div class="area">${esc(f.area)}</div>
+        <div class="meta">
+          <span><b>${f.kvm}</b> kvm</span>
+          ${f.rooms ? `<span><b>${f.rooms}</b> rum</span>` : ""}
+          ${f.floor ? `<span>${esc(f.floor)}</span>` : ""}
+          ${f.fee ? `<span>${esc(f.fee.toLocaleString("sv-SE"))} kr/mån</span>` : ""}
+          ${f.sqm ? `<span>${esc(f.sqm.toLocaleString("sv-SE"))} kr/m²</span>` : ""}
+        </div>
+        <div class="badges">
+          <span class="bdg${f.dm ? " yes" : ""}">${f.dm ? "✓" : "?"} diskmaskin</span>
+          <span class="bdg${f.tm ? " yes" : ""}">${f.tm ? "✓" : "?"} tvättmaskin</span>
+        </div>
+        <div class="links">
+          <a href="${safeUrl(f.url)}" target="_blank" rel="noopener">${esc(f.src)} ↗</a>
+          ${f.also.map(a => `<a href="${safeUrl(a.url)}" target="_blank" rel="noopener">${esc(a.src)} ↗</a>`).join("")}
+          ${f.burl ? `<a href="${safeUrl(f.burl)}" target="_blank" rel="noopener">Mäklaren ↗</a>` : ""}
+        </div>
+      </div>`).join("");
+    document.getElementById("count").textContent = list.length;
+    document.getElementById("empty").hidden = list.length > 0;
+  }
+  render();
+</script>
