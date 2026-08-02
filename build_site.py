@@ -40,7 +40,8 @@ def main():
     for it in items:
         rows.append("    {{ addr:{addr}, area:{area}, dist:{dist}, price:{price}, fee:{fee}, "
                     "kvm:{kvm}, rooms:{rooms}, floor:{floor}, sqm:{sqm}, dm:{dm}, tm:{tm}, "
-                    "up:{up}, isnew:{isnew}, seen:{seen}, src:{src}, url:{url}, burl:{burl}, also:{also} }},".format(
+                    "up:{up}, isnew:{isnew}, seen:{seen}, src:{src}, url:{url}, burl:{burl}, "
+                    "yr:{yr}, plan:{plan}, charm:{charm}, also:{also} }},".format(
             addr=js(it["address"]), area=js(it["area"]), dist=js(district(it)),
             price=it["price"] or "null", fee=it["fee"] or "null", kvm=it["kvm"],
             rooms=it["rooms"] or "null", floor=js(it.get("floor") or ""),
@@ -49,6 +50,8 @@ def main():
             up="true" if it.get("upcoming") else "false",
             isnew="true" if it.get("new") else "false", seen=js(it["first_seen"]),
             src=js(it["src"]), url=js(it["url"]), burl=js(it.get("broker_url") or ""),
+            yr=it.get("byggar") or "null", plan=js(it.get("plan") or ""),
+            charm=js(it.get("charm") or []),
             also=js(it.get("also") or [])))
     page = (PAGE_TPL
             .replace("__COUNT__", str(len(items)))
@@ -113,6 +116,10 @@ STYLE = r"""<style>
   .badges { display:flex; gap:6px; flex-wrap:wrap; }
   .bdg { font-size:.74rem; padding:3px 9px; border-radius:999px; border:1px solid var(--line); color:var(--ink-soft); }
   .bdg.yes { background:var(--chip); color:var(--chip-ink); border-color:transparent; font-weight:600; }
+  .bdg.charm { background:var(--warn-bg); color:var(--warn); border-color:transparent; font-weight:600; }
+  .plan { display:block; }
+  .plan img { width:100%; height:170px; object-fit:contain; background:#fff;
+    border:1px solid var(--line); border-radius:9px; }
   .links { display:flex; gap:12px; margin-top:auto; padding-top:6px; border-top:1px dashed var(--line); }
   .links a { font-size:.85rem; font-weight:700; color:var(--accent); text-decoration:none; }
   .links a:hover { text-decoration:underline; }
@@ -133,6 +140,7 @@ PAGE_TPL = ("<meta charset='utf-8'><meta name='viewport' content='width=device-w
       <button class="f" id="fDm">✓ Diskmaskin</button>
       <button class="f" id="fTm">✓ Tvättmaskin</button>
       <button class="f" id="fUp">Dölj kommande</button>
+      <button class="f" id="fSk">✨ Sekelskifte</button>
     </div>
     <div class="right-btns"><button class="sort" id="sortBtn">Nyast först</button></div>
   </div>
@@ -146,12 +154,17 @@ PAGE_TPL = ("<meta charset='utf-8'><meta name='viewport' content='width=device-w
     så mäklar-exklusiva objekt fångas den vägen.</p>
   <p>✓-märken för diskmaskin/tvättmaskin läses ur annonstexten — en lägenhet kan ha dem utan att
     texten nämner det, så okänd betyder inte nej. Balkong är hårt krav i sökningen.</p>
+  <p>✨ Sekelskifte = byggår före 1930 (sekelskifte + 20-talsklassicism, hög takhöjd) eller
+    stuckatur/spegeldörrar/takhöjd nämnt i annonsen. Funkis och senare (1930–) har oftast ~2,5 m i tak.</p>
 </div></footer>
 <script>
   const flats = [
 __ROWS__
   ];
-  let dist = "Alla", needDm = false, needTm = false, hideUp = false, sortNew = true;
+  let dist = "Alla", needDm = false, needTm = false, hideUp = false, needSk = false, sortNew = true;
+  // sekelskifte = byggår före 1930 (funkis och senare har lägre takhöjd) eller
+  // charm-signal i annonstexten (stuckatur/spegeldörrar/takhöjd/sekelskifte)
+  const isSekel = f => (f.yr && f.yr <= 1929) || f.charm.length > 0;
   const esc = s => String(s == null ? "" : s).replace(/[&<>"']/g,
     c => ({ "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#39;" }[c]));
   const safeUrl = u => /^https?:\/\//i.test(u) ? u : "#";
@@ -172,6 +185,7 @@ __ROWS__
   toggle("fDm", v => needDm = v);
   toggle("fTm", v => needTm = v);
   toggle("fUp", v => hideUp = v);
+  toggle("fSk", v => needSk = v);
   const sortBtn = document.getElementById("sortBtn");
   sortBtn.onclick = () => { sortNew = !sortNew;
     sortBtn.textContent = sortNew ? "Nyast först" : "Pris: lägst först ↑"; render(); };
@@ -180,7 +194,7 @@ __ROWS__
     const grid = document.getElementById("grid");
     let list = flats.filter(f =>
       (dist === "Alla" || f.dist === dist) &&
-      (!needDm || f.dm) && (!needTm || f.tm) && (!hideUp || !f.up));
+      (!needDm || f.dm) && (!needTm || f.tm) && (!hideUp || !f.up) && (!needSk || isSekel(f)));
     list.sort(sortNew
       ? (a, b) => (b.seen + (b.isnew ? "1" : "0")).localeCompare(a.seen + (a.isnew ? "1" : "0"))
       : (a, b) => (a.price ?? 1e9) - (b.price ?? 1e9));
@@ -196,16 +210,20 @@ __ROWS__
         <div class="price${f.up && !f.price ? " upc" : ""}">${f.price ? esc(kr(f.price)) : "Pris ej satt"}</div>
         <div class="addr">${esc(f.addr)}</div>
         <div class="area">${esc(f.area)}</div>
+        ${f.plan ? `<a class="plan" href="${safeUrl(f.plan)}" target="_blank" rel="noopener">
+          <img src="${safeUrl(f.plan)}" loading="lazy" referrerpolicy="no-referrer" alt="Planritning"></a>` : ""}
         <div class="meta">
           <span><b>${f.kvm}</b> kvm</span>
           ${f.rooms ? `<span><b>${f.rooms}</b> rum</span>` : ""}
           ${f.floor ? `<span>${esc(f.floor)}</span>` : ""}
+          ${f.yr ? `<span>byggd <b>${f.yr}</b></span>` : ""}
           ${f.fee ? `<span>${esc(f.fee.toLocaleString("sv-SE"))} kr/mån</span>` : ""}
           ${f.sqm ? `<span>${esc(f.sqm.toLocaleString("sv-SE"))} kr/m²</span>` : ""}
         </div>
         <div class="badges">
           <span class="bdg${f.dm ? " yes" : ""}">${f.dm ? "✓" : "?"} diskmaskin</span>
           <span class="bdg${f.tm ? " yes" : ""}">${f.tm ? "✓" : "?"} tvättmaskin</span>
+          ${f.charm.map(c => `<span class="bdg charm">✨ ${esc(c)}</span>`).join("")}
         </div>
         <div class="links">
           <a href="${safeUrl(f.url)}" target="_blank" rel="noopener">${esc(f.src)} ↗</a>

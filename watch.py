@@ -31,6 +31,12 @@ BOOLI_AREAS = "115341,115353,115349"               # same three, Booli ids
 MAX_PAGES = 8
 DM = re.compile(r"diskmaskin", re.I)
 TM = re.compile(r"tvättmaskin|tvättpelare|egen tvätt", re.I)
+# sekelskifte charm signals, matched in descriptions -> chips on the site
+CHARM = [("stuckatur", re.compile(r"stuckatur|stuck i tak", re.I)),
+         ("spegeldörrar", re.compile(r"spegeldörr", re.I)),
+         ("takhöjd", re.compile(r"takhöjd|högt i tak", re.I)),
+         ("sekelskifte", re.compile(r"sekelskift", re.I))]
+CACHE_V = 2  # bump to refetch details (old entries lack byggår/plan/charm)
 
 session = requests.Session(impersonate="chrome")
 
@@ -188,47 +194,64 @@ def booli():
     return items
 
 
-# ------------------------------------------------------- badges (dm/tm)
+# ---------------------------------- details (badges, byggår, planritning)
 
-def listing_text(item):
-    """Full description text + broker url for one listing.
+def hemnet_details(plain_id, html, out):
+    """Description, byggår and floorplan all sit on the '<...>PropertyListing:{id}'
+    apollo entity (the page also embeds similar-listings teasers, so only that
+    entity is used)."""
+    ap = next_data(html).get("__APOLLO_STATE__", {})
+    for k, v in ap.items():
+        if k.endswith(f"PropertyListing:{plain_id}") and isinstance(v, dict):
+            out["byggar"] = num(v.get("legacyConstructionYear"))
+            for ik, iv in v.items():
+                if ik.startswith("images(") and isinstance(iv, dict):
+                    for img in iv.get("images") or []:
+                        if "FLOOR_PLAN" in (img.get("labels") or []):
+                            url = next((u for uk, u in img.items() if uk.startswith("url")), None)
+                            out["plan"] = out["plan"] or url
+            return v.get("description") or ""
+    return ""
 
-    Hemnet: description sits on the '<...>PropertyListing:{id}' apollo entity
-    (the page also embeds similar-listings teasers, so grep only that entity).
-    Booli: pages carry no description; follow listingUrl to the broker's own
-    page and use its raw HTML (one listing per page, regex is fine there).
-    """
-    src, plain_id = item["id"].split(":")
-    html = get(item["url"])
-    if src == "hemnet":
-        ap = next_data(html).get("__APOLLO_STATE__", {})
-        for k, v in ap.items():
-            if k.endswith(f"PropertyListing:{plain_id}") and isinstance(v, dict):
-                return v.get("description") or "", ""
-        return item.get("teaser", ""), ""
+
+def booli_details(plain_id, html, out):
+    """Byggår + floorplan from the Booli page apollo; the description only lives
+    on the broker's own page (listingUrl), so fetch that for the text."""
+    ap = next_data(html).get("__APOLLO_STATE__", {})
+    L = ap.get(f"Listing:{plain_id}") or next(
+        (v for v in ap.values() if isinstance(v, dict) and v.get("constructionYear")), {})
+    out["byggar"] = L.get("constructionYear")
+    for k, v in ap.items():
+        if k.startswith("Image:") and isinstance(v, dict) and v.get("primaryLabel") == "floorplan":
+            out["plan"] = f"https://bcdn.se/images/cache/{v['id']}_1440x0.jpg"
+            break
     m = re.search(r'"listingUrl"\s*:\s*"(https?://[^"]+)"', html)
     if not m:
-        return item.get("teaser", ""), ""
-    broker_url = m.group(1)
+        return ""
+    out["broker_url"] = m.group(1)
     # ponytail: verify=False — some mäklare sites ship broken cert chains; read-only scrape
-    r = session.get(broker_url, timeout=40, verify=False)
-    return r.text, broker_url
+    return session.get(m.group(1), timeout=40, verify=False).text
 
 
-def appliance_flags(item, cache):
-    """diskmaskin/tvättmaskin badges from the listing description, cached forever."""
-    if item["id"] in cache:
-        return cache[item["id"]]
+def listing_details(item, cache):
+    """dm/tm badges, byggår, planritning url, charm signals — one cached fetch."""
+    hit = cache.get(item["id"])
+    if hit and hit.get("v") == CACHE_V:
+        return hit
+    out = {"v": CACHE_V, "byggar": None, "plan": None}
     try:
-        text, broker_url = listing_text(item)
+        html = get(item["url"])
+        src, plain_id = item["id"].split(":")
+        text = (hemnet_details if src == "hemnet" else booli_details)(plain_id, html, out)
     except Exception as e:
-        print(f"  ! description fetch failed {item['url']}: {e}")
-        return {"dm": None, "tm": None}  # unknown, retry next run (not cached)
-    flags = {"dm": bool(DM.search(text)) or None, "tm": bool(TM.search(text)) or None}
-    if broker_url:
-        flags["broker_url"] = broker_url
-    cache[item["id"]] = flags
-    return flags
+        print(f"  ! detail fetch failed {item['url']}: {e}")
+        return {"dm": None, "tm": None, "byggar": None, "plan": None, "charm": []}  # not cached -> retried next run
+    text = text or item.get("teaser", "")
+    out["dm"] = bool(DM.search(text)) or None
+    out["tm"] = bool(TM.search(text)) or None
+    out["charm"] = [name for name, rx in CHARM if rx.search(text)]
+    cache[item["id"]] = out
+    return out
 
 
 # ---------------------------------------------------------------- main
@@ -263,7 +286,9 @@ def main():
     cache_p = HERE / "desc_cache.json"
     cache = json.loads(cache_p.read_text()) if cache_p.exists() else {}
     for it in items:
-        it.update(appliance_flags(it, cache))
+        d = dict(listing_details(it, cache))
+        d.pop("v", None)
+        it.update(d)
         it.pop("teaser", None)
     cache_p.write_text(json.dumps(cache))
 
