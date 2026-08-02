@@ -31,6 +31,11 @@
     color:var(--ink-soft); cursor:pointer; }
   button.f:hover, button.sort:hover { border-color:var(--accent); color:var(--ink); }
   button.f.on { background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  select.f { font:inherit; font-size:.85rem; font-weight:600; padding:6px 10px;
+    border-radius:999px; border:1px solid var(--line); background:var(--surface);
+    color:var(--ink-soft); cursor:pointer; }
+  select.f:has(option:checked:not([value=""])) { background:var(--accent);
+    color:var(--accent-ink); border-color:var(--accent); }
   .right-btns { margin-left:auto; display:flex; gap:6px; flex-wrap:wrap; }
   main { padding:20px 0 60px; }
   .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(300px,1fr)); gap:14px; }
@@ -75,6 +80,19 @@
       <button class="f" id="fTm">✓ Tvättmaskin</button>
       <button class="f" id="fUp">Dölj kommande</button>
       <button class="f" id="fSk">✨ Sekelskifte</button>
+      <select class="f" id="fPrice">
+        <option value="">Pris: alla</option>
+        <option value="4000000">≤ 4,0 mkr</option>
+        <option value="4500000">≤ 4,5 mkr</option>
+        <option value="5000000">≤ 5,0 mkr</option>
+        <option value="5500000">≤ 5,5 mkr</option>
+      </select>
+      <select class="f" id="fFee">
+        <option value="">Avgift: alla</option>
+        <option value="3000">≤ 3 000 kr/mån</option>
+        <option value="4000">≤ 4 000 kr/mån</option>
+        <option value="5000">≤ 5 000 kr/mån</option>
+      </select>
     </div>
     <div class="right-btns"><button class="sort" id="sortBtn">Nyast först</button></div>
   </div>
@@ -239,6 +257,9 @@
   toggle("fTm", v => needTm = v);
   toggle("fUp", v => hideUp = v);
   toggle("fSk", v => needSk = v);
+  let maxPrice = 0, maxFee = 0;
+  document.getElementById("fPrice").onchange = e => { maxPrice = +e.target.value; render(); };
+  document.getElementById("fFee").onchange = e => { maxFee = +e.target.value; render(); };
   const sortBtn = document.getElementById("sortBtn");
   sortBtn.onclick = () => { sortNew = !sortNew;
     sortBtn.textContent = sortNew ? "Nyast först" : "Pris: lägst först ↑"; render(); };
@@ -247,7 +268,9 @@
     const grid = document.getElementById("grid");
     let list = flats.filter(f =>
       (dist === "Alla" || f.dist === dist) &&
-      (!needDm || f.dm) && (!needTm || f.tm) && (!hideUp || !f.up) && (!needSk || isSekel(f)));
+      (!needDm || f.dm) && (!needTm || f.tm) && (!hideUp || !f.up) && (!needSk || isSekel(f)) &&
+      (!maxPrice || !f.price || f.price <= maxPrice) &&   // okänt pris (kommande) döljs inte
+      (!maxFee || !f.fee || f.fee <= maxFee));
     list.sort(sortNew
       ? (a, b) => (b.seen + (b.isnew ? "1" : "0")).localeCompare(a.seen + (a.isnew ? "1" : "0"))
       : (a, b) => (a.price ?? 1e9) - (b.price ?? 1e9));
