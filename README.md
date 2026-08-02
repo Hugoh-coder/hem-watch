@@ -18,8 +18,11 @@ minst **40 kvm** · **balkong** (hard filter) · diskmaskin/tvättmaskin as badg
   fetched once.
 - `build_site.py` — renders `docs/index.html` (GitHub Pages) with district/badge
   filters and NY tags driven by `seen_ids.json`.
-- `.github/workflows/refresh.yml` — daily 06:30 Swedish time, commits the refreshed
-  page + state back.
+- Daily refresh runs **locally** via launchd (`com.hugo.hem-watch`, 06:30 — missed
+  runs fire after the Mac wakes): `refresh.sh` scrapes, rebuilds and pushes; GitHub
+  Pages just serves. GitHub Actions can't scrape here — Cloudflare 403s CI IPs.
+  The repo really lives at `~/hem-watch` (launchd can't read `~/Documents` without
+  extra permissions); `~/Documents/coding/hem-watch` is a symlink to it.
 
 ## Run locally
 
