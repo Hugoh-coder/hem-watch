@@ -174,6 +174,7 @@ PAGE_TPL = ("<meta charset='utf-8'><meta name='viewport' content='width=device-w
     texten nämner det, så okänd betyder inte nej. Balkong är hårt krav i sökningen.</p>
   <p>✨ Sekelskifte = byggår före 1930 (sekelskifte + 20-talsklassicism, hög takhöjd) eller
     stuckatur/spegeldörrar/takhöjd nämnt i annonsen. Funkis och senare (1930–) har oftast ~2,5 m i tak.</p>
+  <p>Bottenvåning (vån under 1) visas aldrig. Lägenheter utan våningsuppgift visas — okänt är inte bottenvåning.</p>
 </div></footer>
 <script>
   const flats = [

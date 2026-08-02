@@ -277,11 +277,22 @@ def dedupe(items):
     return kept
 
 
+def floor_no(f):
+    """'vån 1,5/3' -> 1.5; None if no floor stated."""
+    m = re.match(r"vån\s*([\d,]+)", f or "")
+    return float(m.group(1).replace(",", ".")) if m else None
+
+
 def main():
     h = hemnet()
     b = booli()
     print(f"hemnet: {len(h)}  booli: {len(b)}")
     items = dedupe(h + b)
+    # no bottenvåning: sources count ground floor as vån 0 (vån 1 = 1 tr up).
+    # Unknown floor is kept — absence of data is not evidence of bottenvåning.
+    before = len(items)
+    items = [i for i in items if (fn := floor_no(i["floor"])) is None or fn >= 1]
+    print(f"dropped {before - len(items)} bottenvåning (vån < 1)")
 
     cache_p = HERE / "desc_cache.json"
     cache = json.loads(cache_p.read_text()) if cache_p.exists() else {}
