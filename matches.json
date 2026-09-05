@@ -1,6 +1,1098 @@
 {
- "updated": "2026-08-29",
+ "updated": "2026-09-05",
  "items": [
+  {
+   "id": "booli:6253998",
+   "src": "Booli",
+   "url": "https://www.booli.se/annons/6253998",
+   "address": "Wargentinsgatan 5E",
+   "area": "Kungsholmen",
+   "price": null,
+   "fee": 3027,
+   "kvm": 52,
+   "rooms": 2,
+   "floor": "vån 4",
+   "sqm_price": null,
+   "published": "2026-09-04",
+   "upcoming": true,
+   "byggar": 1932,
+   "plan": "https://bcdn.se/images/cache/55917069_1440x0.jpg",
+   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S13661/OBJ5PMFG6N2MFW597T3BJ/Booli",
+   "dm": null,
+   "tm": true,
+   "charm": [
+    "sekelskifte"
+   ],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6253484",
+   "src": "Booli",
+   "url": "https://www.booli.se/bostad/646354",
+   "address": "Kungsholms Strand 107",
+   "area": "Kungsholmen",
+   "price": null,
+   "fee": 4172,
+   "kvm": 50,
+   "rooms": 2,
+   "floor": "vån 5",
+   "sqm_price": null,
+   "published": "2026-09-04",
+   "upcoming": true,
+   "byggar": 1997,
+   "plan": "https://bcdn.se/images/cache/53158125_1440x0.jpg",
+   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/M22127/OBJ5PTTBJN3289NCPTVB2/Booli",
+   "dm": null,
+   "tm": true,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6253483",
+   "src": "Booli",
+   "url": "https://www.booli.se/bostad/718729",
+   "address": "Samaritgränd 3",
+   "area": "Södermalm",
+   "price": null,
+   "fee": 2922,
+   "kvm": 44,
+   "rooms": 2,
+   "floor": "vån 4",
+   "sqm_price": null,
+   "published": "2026-09-04",
+   "upcoming": true,
+   "dm": null,
+   "tm": null,
+   "byggar": null,
+   "plan": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6252930",
+   "src": "Booli",
+   "url": "https://www.booli.se/bostad/706063",
+   "address": "Renstiernas gata 27",
+   "area": "Södermalm",
+   "price": null,
+   "fee": 1025,
+   "kvm": 41,
+   "rooms": 2,
+   "floor": "vån 2",
+   "sqm_price": null,
+   "published": "2026-09-04",
+   "upcoming": true,
+   "byggar": 1959,
+   "plan": "https://bcdn.se/images/cache/55888909_1440x0.jpg",
+   "broker_url": "https://www.skandiamaklarna.se/api/redirect/estate/MDMwM3wwMDAwMDQ2ODQ0MHw1OA../",
+   "dm": true,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6252889",
+   "src": "Booli",
+   "url": "https://www.booli.se/bostad/565927",
+   "address": "Timotejgatan 4",
+   "area": "Södermalm",
+   "price": null,
+   "fee": 2804,
+   "kvm": 43,
+   "rooms": 2,
+   "floor": "vån 1",
+   "sqm_price": null,
+   "published": "2026-09-04",
+   "upcoming": true,
+   "byggar": 1930,
+   "plan": "https://bcdn.se/images/cache/55887361_1440x0.jpg",
+   "broker_url": "http://nestorfastighetsmakleri.se/objekt/1966095",
+   "dm": true,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6252655",
+   "src": "Booli",
+   "url": "https://www.booli.se/bostad/663601",
+   "address": "Lundagatan 36E",
+   "area": "Södermalm Skinnarviksberget Högalid",
+   "price": null,
+   "fee": 2249,
+   "kvm": 43,
+   "rooms": 2,
+   "floor": "vån 1",
+   "sqm_price": null,
+   "published": "2026-09-04",
+   "upcoming": true,
+   "byggar": 1931,
+   "plan": "https://bcdn.se/images/cache/55904275_1440x0.jpg",
+   "broker_url": "http://bloomspecs.se/bloomspecsnew/public/api/deal/redirect/885cb39afdaa4faa46f9/MDA3NXwwMDAwMDAwMDQ5OHw1OA..",
+   "dm": true,
+   "tm": null,
+   "charm": [
+    "takhöjd"
+   ],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6252528",
+   "src": "Booli",
+   "url": "https://www.booli.se/bostad/632077",
+   "address": "Katarina Bangata 55",
+   "area": "Södermalm Sofia",
+   "price": 4995000,
+   "fee": 3592,
+   "kvm": 48,
+   "rooms": 2,
+   "floor": "vån 4",
+   "sqm_price": null,
+   "published": "2026-09-04",
+   "upcoming": false,
+   "dm": null,
+   "tm": null,
+   "byggar": null,
+   "plan": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6252364",
+   "src": "Booli",
+   "url": "https://www.booli.se/bostad/655295",
+   "address": "Lidnersgatan 4",
+   "area": "Kungsholmen",
+   "price": null,
+   "fee": 3539,
+   "kvm": 43,
+   "rooms": 2,
+   "floor": "vån 1",
+   "sqm_price": null,
+   "published": "2026-09-04",
+   "upcoming": true,
+   "byggar": 1938,
+   "plan": "https://bcdn.se/images/cache/55872646_1440x0.jpg",
+   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/M12730/OBJ5PCDVMN2L8N47D28BR/Booli",
+   "dm": true,
+   "tm": true,
+   "charm": [
+    "sekelskifte"
+   ],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6252096",
+   "src": "Booli",
+   "url": "https://www.booli.se/annons/6252096",
+   "address": "Kungsholms Strand 139",
+   "area": "Kungsholmen",
+   "price": null,
+   "fee": 2739,
+   "kvm": 43,
+   "rooms": 2,
+   "floor": "vån 3",
+   "sqm_price": null,
+   "published": "2026-09-04",
+   "upcoming": true,
+   "byggar": null,
+   "plan": "https://bcdn.se/images/cache/55866178_1440x0.jpg",
+   "broker_url": "https://www.maklarhuset.se/bostad/sverige/stockholm/stockholm/kungsholms-strand/676096",
+   "dm": true,
+   "tm": true,
+   "charm": [
+    "sekelskifte"
+   ],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6251463",
+   "src": "Booli",
+   "url": "https://www.booli.se/annons/6251463",
+   "address": "Ulriksborgsgatan 7",
+   "area": "Kungsholmen",
+   "price": null,
+   "fee": 3014,
+   "kvm": 40,
+   "rooms": 1,
+   "floor": "vån 11",
+   "sqm_price": null,
+   "published": "2026-09-03",
+   "upcoming": true,
+   "byggar": 2006,
+   "plan": "https://bcdn.se/images/cache/55857599_1440x0.jpg",
+   "broker_url": "https://www.diplomatmakleri.se/listing/ulriksborgsgatan-7-zcxoxw1o",
+   "dm": true,
+   "tm": true,
+   "charm": [
+    "takhöjd"
+   ],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6250838",
+   "src": "Booli",
+   "url": "https://www.booli.se/annons/6250838",
+   "address": "Anna Steckséns gata 15",
+   "area": "Vasastan",
+   "price": 5275000,
+   "fee": 3898,
+   "kvm": 45,
+   "rooms": 2,
+   "floor": "vån 4",
+   "sqm_price": null,
+   "published": "2026-09-03",
+   "upcoming": true,
+   "byggar": 2022,
+   "plan": "https://bcdn.se/images/cache/55842924_1440x0.jpg",
+   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S13590/OBJ5PW5SD32JFQGTCFWBC/Booli",
+   "dm": null,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6250747",
+   "src": "Booli",
+   "url": "https://www.booli.se/annons/6250747",
+   "address": "Pipersgatan 20",
+   "area": "Kungsholmen",
+   "price": null,
+   "fee": 4698,
+   "kvm": 43,
+   "rooms": 2,
+   "floor": "vån 6",
+   "sqm_price": null,
+   "published": "2026-09-03",
+   "upcoming": true,
+   "byggar": 1932,
+   "plan": "https://bcdn.se/images/cache/55841241_1440x0.jpg",
+   "broker_url": "https://www.skandiamaklarna.se/api/redirect/estate/MDMwM3wwMDAwMDQ2NjkwMHw1OA../",
+   "dm": true,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6245180",
+   "src": "Booli",
+   "url": "https://www.booli.se/annons/6245180",
+   "address": "Adlerbethsgatan 15",
+   "area": "Kungsholmen",
+   "price": null,
+   "fee": 3454,
+   "kvm": 46,
+   "rooms": 2,
+   "floor": "vån 1",
+   "sqm_price": null,
+   "published": "2026-09-02",
+   "upcoming": false,
+   "dm": null,
+   "tm": null,
+   "byggar": null,
+   "plan": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6249629",
+   "src": "Booli",
+   "url": "https://www.booli.se/annons/6249629",
+   "address": "Norrtullsgatan 30",
+   "area": "Vasastan",
+   "price": null,
+   "fee": 3517,
+   "kvm": 50,
+   "rooms": 2,
+   "floor": "vån 4",
+   "sqm_price": null,
+   "published": "2026-09-02",
+   "upcoming": true,
+   "dm": null,
+   "tm": null,
+   "byggar": null,
+   "plan": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6248946",
+   "src": "Booli",
+   "url": "https://www.booli.se/annons/6248946",
+   "address": "P O Hallmans gata 1",
+   "area": "Kungsholmen",
+   "price": null,
+   "fee": 4172,
+   "kvm": 50,
+   "rooms": 2,
+   "floor": "vån 6",
+   "sqm_price": null,
+   "published": "2026-09-02",
+   "upcoming": true,
+   "byggar": 1997,
+   "plan": "https://bcdn.se/images/cache/55808737_1440x0.jpg",
+   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S13661/OBJ5PDBZWM2MFWMKP38BP/Booli",
+   "dm": true,
+   "tm": true,
+   "charm": [
+    "sekelskifte"
+   ],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6248908",
+   "src": "Booli",
+   "url": "https://www.booli.se/bostad/711325",
+   "address": "Rosenlundsgatan 20",
+   "area": "Södermalm Maria",
+   "price": null,
+   "fee": 2263,
+   "kvm": 46,
+   "rooms": 2,
+   "floor": "vån 1",
+   "sqm_price": null,
+   "published": "2026-09-02",
+   "upcoming": true,
+   "byggar": null,
+   "plan": "https://bcdn.se/images/cache/55807764_1440x0.jpg",
+   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S12038/CMBOLGH5H9II6IUAT727NGG/Booli",
+   "dm": null,
+   "tm": true,
+   "charm": [
+    "takhöjd"
+   ],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6247097",
+   "src": "Booli",
+   "url": "https://www.booli.se/annons/6247097",
+   "address": "Frejgatan 75",
+   "area": "Vasastan",
+   "price": null,
+   "fee": 2302,
+   "kvm": 48,
+   "rooms": 1,
+   "floor": "vån 4",
+   "sqm_price": null,
+   "published": "2026-09-01",
+   "upcoming": true,
+   "dm": null,
+   "tm": null,
+   "byggar": null,
+   "plan": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6246287",
+   "src": "Booli",
+   "url": "https://www.booli.se/bostad/4538402",
+   "address": "Tegelviksgatan 18",
+   "area": "Södermalm",
+   "price": null,
+   "fee": 4115,
+   "kvm": 45,
+   "rooms": 2,
+   "floor": "vån 4",
+   "sqm_price": null,
+   "published": "2026-08-31",
+   "upcoming": true,
+   "byggar": 2023,
+   "plan": "https://bcdn.se/images/cache/55755621_1440x0.jpg",
+   "broker_url": "https://www.husmanhagberg.se/objekt/annons/OBJ5PQLB7R3DVKFLZXXBW",
+   "dm": null,
+   "tm": true,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6245705",
+   "src": "Booli",
+   "url": "https://www.booli.se/annons/6245705",
+   "address": "Tobaksspinnargatan 4",
+   "area": "Hornstull",
+   "price": null,
+   "fee": 2497,
+   "kvm": 44,
+   "rooms": 2,
+   "floor": "vån 2",
+   "sqm_price": null,
+   "published": "2026-08-31",
+   "upcoming": true,
+   "byggar": 1931,
+   "plan": "https://bcdn.se/images/cache/55742772_1440x0.jpg",
+   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S13590/OBJ5PRTRK42JFQWGWRBB4/Booli",
+   "dm": null,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6245178",
+   "src": "Booli",
+   "url": "https://www.booli.se/annons/6245178",
+   "address": "Stagneliusvägen 26",
+   "area": "Kungsholmen",
+   "price": null,
+   "fee": 4240,
+   "kvm": 48,
+   "rooms": 2,
+   "floor": "vån 4",
+   "sqm_price": null,
+   "published": "2026-08-31",
+   "upcoming": true,
+   "byggar": 1937,
+   "plan": "https://bcdn.se/images/cache/55731304_1440x0.jpg",
+   "broker_url": "https://www.svenskfast.se/bostadsratt/stockholm/stockholm/stockholm/kungsholmen/fredhall/stagneliusvagen/461684/",
+   "dm": true,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6244699",
+   "src": "Booli",
+   "url": "https://www.booli.se/bostad/736813",
+   "address": "Skånegatan 81",
+   "area": "Södermalm",
+   "price": null,
+   "fee": 1709,
+   "kvm": 44,
+   "rooms": 2,
+   "floor": "vån 3,5",
+   "sqm_price": null,
+   "published": "2026-08-29",
+   "upcoming": true,
+   "byggar": 1912,
+   "plan": "https://bcdn.se/images/cache/55723788_1440x0.jpg",
+   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/M32413/OBJ5PS9FNH3HCMH7H5MB3/Booli",
+   "dm": true,
+   "tm": true,
+   "charm": [
+    "takhöjd",
+    "sekelskifte"
+   ],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "booli:6167610",
+   "src": "Booli",
+   "url": "https://www.booli.se/bostad/309715",
+   "address": "Rålambsvägen 54",
+   "area": "Kungsholmen",
+   "price": 3850000,
+   "fee": 2952,
+   "kvm": 40,
+   "rooms": 2,
+   "floor": "vån 1",
+   "sqm_price": null,
+   "published": "2026-08-29",
+   "upcoming": false,
+   "byggar": 1931,
+   "plan": "https://bcdn.se/images/cache/55815674_1440x0.jpg",
+   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/M22127/OBJ5PDJB5K3289KGKZRBK/Booli",
+   "dm": null,
+   "tm": null,
+   "charm": [
+    "takhöjd"
+   ],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21782497",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-kristineberg-kungsholmen-stockholms-kommun-lidnersplan-12,-3tr-21782497",
+   "address": "Lidnersplan 12, 3tr",
+   "area": "Kristineberg Kungsholmen",
+   "price": 3995000,
+   "fee": 3379,
+   "kvm": 44,
+   "rooms": 2,
+   "floor": "vån 3/6",
+   "sqm_price": 90795,
+   "published": "1788543569",
+   "upcoming": false,
+   "also": [
+    {
+     "src": "Booli",
+     "url": "https://www.booli.se/bostad/498769"
+    },
+    {
+     "src": "Booli",
+     "url": "https://www.booli.se/bostad/498782"
+    }
+   ],
+   "byggar": 1938,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/42/0a/420ac7464f9c78b9b5c51f1d14218e53.jpg",
+   "dm": true,
+   "tm": null,
+   "charm": [
+    "takhöjd"
+   ],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21781529",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-3rum-hornsbergs-strand-stockholms-kommun-sara-lidmans-gata-2-21781529",
+   "address": "Sara Lidmans Gata 2",
+   "area": "Hornsbergs Strand",
+   "price": 5995000,
+   "fee": 3160,
+   "kvm": 64,
+   "rooms": 3,
+   "floor": "vån 4/8",
+   "sqm_price": 92946,
+   "published": "1788530400",
+   "upcoming": false,
+   "also": [
+    {
+     "src": "Booli",
+     "url": "https://www.booli.se/bostad/437702"
+    }
+   ],
+   "byggar": 2011,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/29/d7/29d7033b46f290bbfab5ec8969ba3836.jpg",
+   "dm": true,
+   "tm": true,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21779680",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-katarina-stockholms-kommun-ringvagen-87b,-3-tr-i-gardshuset-21779680",
+   "address": "Ringvägen 87B, 3 tr I gårdshuset",
+   "area": "Södermalm - Katarina",
+   "price": 5195000,
+   "fee": 2520,
+   "kvm": 50,
+   "rooms": 2,
+   "floor": "vån 3",
+   "sqm_price": 103900,
+   "published": "1788530400",
+   "upcoming": false,
+   "also": [
+    {
+     "src": "Booli",
+     "url": "https://www.booli.se/bostad/709957"
+    }
+   ],
+   "byggar": 1934,
+   "plan": null,
+   "dm": null,
+   "tm": null,
+   "charm": [
+    "takhöjd"
+   ],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21782220",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-hogalid-stockholms-kommun-maria-bangata-9,-7-tr-21782220",
+   "address": "Maria Bangata 9, 7 tr",
+   "area": "Södermalm-Högalid",
+   "price": 4995000,
+   "fee": 3587,
+   "kvm": 57,
+   "rooms": 2,
+   "floor": "vån 7/9",
+   "sqm_price": 87632,
+   "published": "1788530307",
+   "upcoming": false,
+   "also": [
+    {
+     "src": "Booli",
+     "url": "https://www.booli.se/bostad/670008"
+    }
+   ],
+   "byggar": 1988,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/3c/1d/3c1dd80898ed3469b9dc4b4a5d7e8327.jpg",
+   "dm": null,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21782143",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-maria-hogalid-stockholms-kommun-bergsundsgatan-14,-1-tr-21782143",
+   "address": "Bergsundsgatan 14, 1 tr",
+   "area": "Södermalm - Maria Högalid",
+   "price": 3950000,
+   "fee": 3664,
+   "kvm": 40,
+   "rooms": 2,
+   "floor": "vån 5",
+   "sqm_price": 98750,
+   "published": "1788528476",
+   "upcoming": false,
+   "also": [
+    {
+     "src": "Booli",
+     "url": "https://www.booli.se/annons/6242143"
+    }
+   ],
+   "byggar": 1939,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/90/3b/903ba2004ec15f1fbae441cf7730eace.png",
+   "dm": null,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21782149",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-maria-hogalid-stockholms-kommun-wollmar-yxkullsgatan-50b,-2-tr-21782149",
+   "address": "Wollmar Yxkullsgatan 50B, 2 tr",
+   "area": "Södermalm - Maria Högalid",
+   "price": 4895000,
+   "fee": 3602,
+   "kvm": 53,
+   "rooms": 2,
+   "floor": "vån 2",
+   "sqm_price": 92358,
+   "published": "1788527912",
+   "upcoming": false,
+   "also": [
+    {
+     "src": "Booli",
+     "url": "https://www.booli.se/annons/6235234"
+    }
+   ],
+   "byggar": 1935,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/e7/87/e78757d5888f8b6dd6d35fbe21c908ed.png",
+   "dm": null,
+   "tm": null,
+   "charm": [
+    "takhöjd"
+   ],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21781098",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-katarina-stockholms-kommun-asogatan-92-21781098",
+   "address": "Åsögatan 92",
+   "area": "Södermalm Katarina",
+   "price": 5995000,
+   "fee": 3240,
+   "kvm": 49,
+   "rooms": 2,
+   "floor": "vån 6/6",
+   "sqm_price": 122347,
+   "published": "1788520785",
+   "upcoming": false,
+   "also": [
+    {
+     "src": "Booli",
+     "url": "https://www.booli.se/annons/6231592"
+    }
+   ],
+   "byggar": 1936,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/38/78/38781c3090d24a58ce95663f3af7076c.jpg",
+   "dm": null,
+   "tm": null,
+   "charm": [
+    "spegeldörrar",
+    "takhöjd"
+   ],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21780589",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-katarina-sofia-stockholms-kommun-renstiernas-gata-30-21780589",
+   "address": "Renstiernas Gata 30",
+   "area": "Södermalm - Katarina Sofia",
+   "price": 4495000,
+   "fee": 2653,
+   "kvm": 40,
+   "rooms": 2,
+   "floor": "vån 3",
+   "sqm_price": 112375,
+   "published": "1788517367",
+   "upcoming": false,
+   "also": [
+    {
+     "src": "Booli",
+     "url": "https://www.booli.se/bostad/706130"
+    }
+   ],
+   "byggar": 1930,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/d5/27/d527f468e101408fedeba60b61f254d0.png",
+   "dm": true,
+   "tm": true,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21767389",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-stockholms-kommun-kellgrensgatan-21767389",
+   "address": "Kellgrensgatan",
+   "area": "Stockholm",
+   "price": 4295000,
+   "fee": 3792,
+   "kvm": 48,
+   "rooms": 2,
+   "floor": "vån 2",
+   "sqm_price": 89479,
+   "published": "1788438245",
+   "upcoming": false,
+   "byggar": null,
+   "plan": null,
+   "dm": true,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21779859",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-stockholms-kommun-fridhemsgatan-14a-21779859",
+   "address": "Fridhemsgatan 14A",
+   "area": "Kungsholmen",
+   "price": 4800000,
+   "fee": 3322,
+   "kvm": 41,
+   "rooms": 2,
+   "floor": "vån 5/6",
+   "sqm_price": 117073,
+   "published": "1788275850",
+   "upcoming": false,
+   "also": [
+    {
+     "src": "Booli",
+     "url": "https://www.booli.se/bostad/142789"
+    }
+   ],
+   "byggar": 1927,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/24/e2/24e28f6913fd46d30f75fd95349ec6ae.jpg",
+   "dm": true,
+   "tm": null,
+   "charm": [
+    "takhöjd"
+   ],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21774418",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-stockholm-stockholms-kommun-anders-reimers-vag-13-21774418",
+   "address": "Anders Reimers väg 13",
+   "area": "Stockholm",
+   "price": 4495000,
+   "fee": 3531,
+   "kvm": 42,
+   "rooms": 2,
+   "floor": "vån 4/7",
+   "sqm_price": 107024,
+   "published": "1788271384",
+   "upcoming": false,
+   "byggar": 1943,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/31/6d/316d75a6f7618cd4beb522c96f6df59a.jpg",
+   "dm": null,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21778775",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-stockholms-kommun-warfvinges-vag-18-21778775",
+   "address": "Warfvinges väg 18",
+   "area": "Kungsholmen",
+   "price": 4250000,
+   "fee": 4547,
+   "kvm": 52,
+   "rooms": 2,
+   "floor": "vån 2/15",
+   "sqm_price": 80952,
+   "published": "1788165856",
+   "upcoming": false,
+   "also": [
+    {
+     "src": "Booli",
+     "url": "https://www.booli.se/bostad/3748068"
+    }
+   ],
+   "byggar": 2015,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/7b/6f/7b6fce46bf3db29f159bd1fc9dc2722a.jpg",
+   "dm": null,
+   "tm": true,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21778717",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-3rum-kristineberg-kungsholmen-stockholms-kommun-love-almqvists-vag-10,-5tr-21778717",
+   "address": "Love Almqvists Väg 10, 5tr",
+   "area": "Kristineberg Kungsholmen",
+   "price": 5995000,
+   "fee": 3902,
+   "kvm": 60,
+   "rooms": 3,
+   "floor": "vån 5/6",
+   "sqm_price": 99917,
+   "published": "1788162379",
+   "upcoming": false,
+   "byggar": 1932,
+   "plan": null,
+   "dm": null,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21778647",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-hogalid-stockholms-kommun-jagargatan-3,-1-tr-21778647",
+   "address": "Jägargatan 3, 1 tr",
+   "area": "Södermalm - Högalid",
+   "price": 3995000,
+   "fee": 2410,
+   "kvm": 43,
+   "rooms": 2,
+   "floor": "vån 1",
+   "sqm_price": 91839,
+   "published": "1788111244",
+   "upcoming": false,
+   "byggar": null,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/67/cf/67cf9fd5a6afddf6b9be03515927f072.jpg",
+   "dm": null,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21778547",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-tegnerlunden-stockholms-kommun-teknologgatan-9d-21778547",
+   "address": "Teknologgatan 9D",
+   "area": "Tegnérlunden",
+   "price": 5895000,
+   "fee": 3457,
+   "kvm": 49,
+   "rooms": 2,
+   "floor": "vån 2/4",
+   "sqm_price": 120306,
+   "published": "1788086814",
+   "upcoming": false,
+   "also": [
+    {
+     "src": "Booli",
+     "url": "https://www.booli.se/annons/6231337"
+    }
+   ],
+   "byggar": 1882,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/f2/8c/f28ca26f8d06f2c1158e86e51a6b574d.jpg",
+   "dm": null,
+   "tm": null,
+   "charm": [
+    "takhöjd",
+    "sekelskifte"
+   ],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21778481",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-thorildsplan-stockholms-kommun-gyllenborgsgatan-12-21778481",
+   "address": "Gyllenborgsgatan 12",
+   "area": "Kungsholmen - Thorildsplan",
+   "price": 3995000,
+   "fee": 3829,
+   "kvm": 43,
+   "rooms": 2,
+   "floor": "vån 2/3",
+   "sqm_price": 92907,
+   "published": "1788079667",
+   "upcoming": false,
+   "also": [
+    {
+     "src": "Booli",
+     "url": "https://www.booli.se/annons/6244541"
+    }
+   ],
+   "byggar": 1926,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/88/e7/88e71f38889b8a5b4d52e3fdf69f91ad.jpg",
+   "dm": null,
+   "tm": null,
+   "charm": [
+    "takhöjd"
+   ],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21778563",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-nedre-kungsholmen-stockholms-kommun-sysslomansgatan-11-21778563",
+   "address": "Sysslomansgatan 11",
+   "area": "Kungsholmen - Nedre Kungsholmen",
+   "price": 4795000,
+   "fee": 2821,
+   "kvm": 47,
+   "rooms": 2,
+   "floor": "vån 1/8",
+   "sqm_price": 102021,
+   "published": "1788076116",
+   "upcoming": false,
+   "also": [
+    {
+     "src": "Booli",
+     "url": "https://www.booli.se/bostad/759014"
+    }
+   ],
+   "byggar": 1939,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/7e/1c/7e1ca7a460e9ae5e4253dae406e90450.jpg",
+   "dm": null,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21778438",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-stockholms-kommun-drottningholmsvagen-40,-5-tr-21778438",
+   "address": "Drottningholmsvägen 40, 5 tr",
+   "area": "Kungsholmen",
+   "price": 4250000,
+   "fee": 2379,
+   "kvm": 42,
+   "rooms": 2,
+   "floor": "vån 5/10",
+   "sqm_price": 101190,
+   "published": "1787999444",
+   "upcoming": false,
+   "byggar": 2012,
+   "plan": null,
+   "dm": null,
+   "tm": true,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21778407",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2,5rum-vasastan-stockholms-kommun-ynglingagatan-5,-4-tr-21778407",
+   "address": "Ynglingagatan 5, 4 tr",
+   "area": "Vasastan",
+   "price": 5950000,
+   "fee": 4950,
+   "kvm": 68,
+   "rooms": 2,
+   "floor": "vån 4/5",
+   "sqm_price": 87500,
+   "published": "1787995776",
+   "upcoming": false,
+   "also": [
+    {
+     "src": "Booli",
+     "url": "https://www.booli.se/annons/6244317"
+    }
+   ],
+   "byggar": 1929,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/22/0b/220b77bab8ae3c7c8ebc9e552f906bc7.jpg",
+   "dm": null,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21778340",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-vastra-kungsholmen-hornsbergs-strand-stockholms-kommun-lindhagensgatan-145-21778340",
+   "address": "Lindhagensgatan 145",
+   "area": "Västra Kungsholmen - Hornsbergs strand",
+   "price": 4695000,
+   "fee": 3074,
+   "kvm": 49,
+   "rooms": 2,
+   "floor": "vån 4/8",
+   "sqm_price": 95816,
+   "published": "1787982521",
+   "upcoming": false,
+   "also": [
+    {
+     "src": "Booli",
+     "url": "https://www.booli.se/annons/6244218"
+    }
+   ],
+   "byggar": 2012,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/e8/6b/e86b7f243e591b0e1fdee2afd487310a.jpg",
+   "dm": null,
+   "tm": true,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
+  {
+   "id": "hemnet:21775894",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-vasastan-stockholms-kommun-norrbackagatan-28-21775894",
+   "address": "Norrbackagatan 28",
+   "area": "Vasastan",
+   "price": 5950000,
+   "fee": 3299,
+   "kvm": 40,
+   "rooms": 2,
+   "floor": "vån 2/3",
+   "sqm_price": 148750,
+   "published": "1787748103",
+   "upcoming": false,
+   "byggar": null,
+   "plan": null,
+   "dm": null,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-05",
+   "new": true
+  },
   {
    "id": "booli:6243573",
    "src": "Booli",
@@ -24,32 +1116,7 @@
     "sekelskifte"
    ],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "booli:6243490",
-   "src": "Booli",
-   "url": "https://www.booli.se/annons/6243490",
-   "address": "Tomtebogatan 13B",
-   "area": "Vasastan",
-   "price": null,
-   "fee": 2731,
-   "kvm": 41,
-   "rooms": 2,
-   "floor": "vån 4",
-   "sqm_price": null,
-   "published": "2026-08-28",
-   "upcoming": true,
-   "byggar": 1909,
-   "plan": "https://bcdn.se/images/cache/55694041_1440x0.jpg",
-   "broker_url": "https://www.fastighetsbyran.com/sv/sverige/till-salu/stockholms-lan/stockholms-stad/objekt/?objektID=3554204",
-   "dm": true,
-   "tm": true,
-   "charm": [
-    "sekelskifte"
-   ],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6243322",
@@ -75,7 +1142,7 @@
     "sekelskifte"
    ],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:5562442",
@@ -98,37 +1165,12 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "booli:6243144",
-   "src": "Booli",
-   "url": "https://www.booli.se/bostad/307036",
-   "address": "Lars Forssells gata 30",
-   "area": "Kungsholmen",
-   "price": 4395000,
-   "fee": 3074,
-   "kvm": 49,
-   "rooms": 2,
-   "floor": "vån 4",
-   "sqm_price": null,
-   "published": "2026-08-28",
-   "upcoming": false,
-   "byggar": 2012,
-   "plan": "https://bcdn.se/images/cache/44580762_1440x0.jpg",
-   "broker_url": "https://diplomat.hazemalkhodary.com/redirectCollectionUrl?dealId=MDAxNXwwMDAwMDAwMzcyMnw1OA..",
-   "dm": true,
-   "tm": true,
-   "charm": [
-    "takhöjd"
-   ],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6242952",
    "src": "Booli",
-   "url": "https://www.booli.se/annons/6242952",
+   "url": "https://www.booli.se/bostad/438524",
    "address": "Hornsgatan 64B",
    "area": "Södermalm",
    "price": null,
@@ -150,7 +1192,7 @@
     "sekelskifte"
    ],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6242752",
@@ -175,7 +1217,7 @@
     "takhöjd"
    ],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6242496",
@@ -198,55 +1240,7 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "booli:6242458",
-   "src": "Booli",
-   "url": "https://www.booli.se/bostad/498709",
-   "address": "Lidnersplan 8",
-   "area": "Kungsholmen",
-   "price": null,
-   "fee": 4482,
-   "kvm": 55,
-   "rooms": 2,
-   "floor": "",
-   "sqm_price": null,
-   "published": "2026-08-28",
-   "upcoming": true,
-   "byggar": 1938,
-   "plan": "https://bcdn.se/images/cache/55666684_1440x0.jpg",
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/M12730/OBJ5PTDRKN2L8N7KXCZBY/Booli",
-   "dm": true,
-   "tm": true,
-   "charm": [
-    "sekelskifte"
-   ],
-   "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "booli:6242346",
-   "src": "Booli",
-   "url": "https://www.booli.se/annons/6242346",
-   "address": "Rålambsvägen 12A",
-   "area": "Kungsholmen",
-   "price": null,
-   "fee": 3613,
-   "kvm": 62,
-   "rooms": 2,
-   "floor": "vån 2",
-   "sqm_price": null,
-   "published": "2026-08-28",
-   "upcoming": true,
-   "byggar": 1989,
-   "plan": "https://bcdn.se/images/cache/55663769_1440x0.jpg",
-   "broker_url": "https://widerlov.se/bostader/ralambsvagen-12a-2/",
-   "dm": true,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6242343",
@@ -269,105 +1263,7 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "booli:6242143",
-   "src": "Booli",
-   "url": "https://www.booli.se/annons/6242143",
-   "address": "Bergsundsgatan 14",
-   "area": "Södermalm",
-   "price": null,
-   "fee": 3664,
-   "kvm": 42,
-   "rooms": 2,
-   "floor": "vån 5",
-   "sqm_price": null,
-   "published": "2026-08-28",
-   "upcoming": true,
-   "byggar": 1939,
-   "plan": "https://bcdn.se/images/cache/55658733_1440x0.jpg",
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S13784/OBJ5PT9NVL2MLBFF74KBM/Booli",
-   "dm": true,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "booli:6241455",
-   "src": "Booli",
-   "url": "https://www.booli.se/bostad/699679",
-   "address": "Pipersgatan 26",
-   "area": "Kungsholmen",
-   "price": null,
-   "fee": 2266,
-   "kvm": 41,
-   "rooms": 2,
-   "floor": "vån 1",
-   "sqm_price": null,
-   "published": "2026-08-27",
-   "upcoming": true,
-   "byggar": 1899,
-   "plan": "https://bcdn.se/images/cache/55644596_1440x0.jpg",
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S13661/OBJ5PT5NRJ2MFWHZM5QBG/Booli",
-   "dm": null,
-   "tm": null,
-   "charm": [
-    "sekelskifte"
-   ],
-   "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "booli:6241250",
-   "src": "Booli",
-   "url": "https://www.booli.se/bostad/442703",
-   "address": "Hälsingegatan 31",
-   "area": "Vasastan",
-   "price": null,
-   "fee": 2470,
-   "kvm": 42,
-   "rooms": 2,
-   "floor": "vån 1",
-   "sqm_price": null,
-   "published": "2026-08-27",
-   "upcoming": true,
-   "byggar": 1929,
-   "plan": "https://bcdn.se/images/cache/55642197_1440x0.jpg",
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/M21183/OBJ5PTDTH52Z2KDQ8J3BA/Booli",
-   "dm": true,
-   "tm": true,
-   "charm": [
-    "sekelskifte"
-   ],
-   "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "booli:6241132",
-   "src": "Booli",
-   "url": "https://www.booli.se/bostad/305900",
-   "address": "Frejgatan 16",
-   "area": "Vasastan",
-   "price": null,
-   "fee": 2038,
-   "kvm": 44,
-   "rooms": 2,
-   "floor": "vån 5",
-   "sqm_price": null,
-   "published": "2026-08-27",
-   "upcoming": true,
-   "byggar": 1936,
-   "plan": "https://bcdn.se/images/cache/55639730_1440x0.jpg",
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/M22127/OBJ5PRBNTK32893QTGQBC/Booli",
-   "dm": true,
-   "tm": true,
-   "charm": [
-    "takhöjd"
-   ],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6240466",
@@ -390,55 +1286,7 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "booli:6240412",
-   "src": "Booli",
-   "url": "https://www.booli.se/bostad/715271",
-   "address": "Rålambsvägen 29",
-   "area": "Kungsholmen",
-   "price": null,
-   "fee": 3341,
-   "kvm": 53,
-   "rooms": 2,
-   "floor": "vån 3",
-   "sqm_price": null,
-   "published": "2026-08-27",
-   "upcoming": true,
-   "byggar": 1943,
-   "plan": "https://bcdn.se/images/cache/55625054_1440x0.jpg",
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S13661/OBJ5PSKMFQ2MFW877J7BW/Booli",
-   "dm": true,
-   "tm": true,
-   "charm": [
-    "sekelskifte"
-   ],
-   "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "booli:6240214",
-   "src": "Booli",
-   "url": "https://www.booli.se/annons/6240214",
-   "address": "Hagagatan 18A",
-   "area": "Vasastan",
-   "price": null,
-   "fee": 2947,
-   "kvm": 50,
-   "rooms": 2,
-   "floor": "vån 2",
-   "sqm_price": null,
-   "published": "2026-08-27",
-   "upcoming": false,
-   "byggar": 1905,
-   "plan": "https://bcdn.se/images/cache/55620500_1440x0.jpg",
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/M17365/OBJ5PRMKVG2S675RS82B8/Booli",
-   "dm": null,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:5823192",
@@ -461,7 +1309,7 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6230786",
@@ -484,7 +1332,7 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6239347",
@@ -507,7 +1355,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:5076754",
@@ -529,7 +1377,7 @@
    "plan": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6225668",
@@ -544,7 +1392,7 @@
    "floor": "vån 1",
    "sqm_price": null,
    "published": "2026-08-25",
-   "upcoming": false,
+   "upcoming": true,
    "byggar": 1934,
    "plan": "https://bcdn.se/images/cache/55303496_1440x0.jpg",
    "broker_url": "https://connect-resolve.maklare.vitec.net/Description/M26608/OBJ5PN7DDS37XBGTHVHB8/Booli",
@@ -554,7 +1402,7 @@
     "sekelskifte"
    ],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6236657",
@@ -577,32 +1425,7 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "booli:6235452",
-   "src": "Booli",
-   "url": "https://www.booli.se/annons/6235452",
-   "address": "Kungsholms Strand 171",
-   "area": "Kungsholmen",
-   "price": null,
-   "fee": 3328,
-   "kvm": 51,
-   "rooms": 2,
-   "floor": "vån 5",
-   "sqm_price": null,
-   "published": "2026-08-24",
-   "upcoming": true,
-   "byggar": 1930,
-   "plan": "https://bcdn.se/images/cache/55535929_1440x0.jpg",
-   "broker_url": "https://www.maklarhuset.se/bostad/sverige/stockholm/stockholm/kungsholms-strand/655983",
-   "dm": null,
-   "tm": true,
-   "charm": [
-    "spegeldörrar"
-   ],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6234429",
@@ -625,7 +1448,7 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6233043",
@@ -650,56 +1473,7 @@
     "takhöjd"
    ],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "booli:6232533",
-   "src": "Booli",
-   "url": "https://www.booli.se/annons/6232533",
-   "address": "Gävlegatan 26",
-   "area": "Vasastan",
-   "price": null,
-   "fee": 3025,
-   "kvm": 55,
-   "rooms": 2,
-   "floor": "vån 6",
-   "sqm_price": null,
-   "published": "2026-08-21",
-   "upcoming": true,
-   "byggar": 2017,
-   "plan": "https://bcdn.se/images/cache/55453023_1440x0.jpg",
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/M22127/OBJ5PSB9KF3289CDHH7BJ/Booli",
-   "dm": null,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "booli:6231592",
-   "src": "Booli",
-   "url": "https://www.booli.se/annons/6231592",
-   "address": "Åsögatan 92",
-   "area": "Södermalm Katarina",
-   "price": null,
-   "fee": 3240,
-   "kvm": 49,
-   "rooms": 2,
-   "floor": "vån 6",
-   "sqm_price": null,
-   "published": "2026-08-20",
-   "upcoming": true,
-   "byggar": 1936,
-   "plan": "https://bcdn.se/images/cache/55432061_1440x0.jpg",
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S12038/OBJ5PG9RQR2GTS7GCZ3BN/Booli",
-   "dm": true,
-   "tm": true,
-   "charm": [
-    "spegeldörrar",
-    "takhöjd"
-   ],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6230657",
@@ -722,7 +1496,7 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:5033883",
@@ -745,7 +1519,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6229832",
@@ -768,59 +1542,7 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "booli:6050079",
-   "src": "Booli",
-   "url": "https://www.booli.se/bostad/708287",
-   "address": "Ringvägen 112",
-   "area": "Södermalm",
-   "price": null,
-   "fee": 3400,
-   "kvm": 55,
-   "rooms": 3,
-   "floor": "vån 2",
-   "sqm_price": null,
-   "published": "2026-08-19",
-   "upcoming": true,
-   "byggar": 1924,
-   "plan": "https://bcdn.se/images/cache/54433229_1440x0.jpg",
-   "broker_url": "https://www.erikolsson.se/homes/Lagenhet-3rum-Ringvagen-112-2tr-Stockholm-Stockholm-kommun-5993280",
-   "dm": null,
-   "tm": true,
-   "charm": [
-    "takhöjd"
-   ],
-   "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "booli:5618577",
-   "src": "Booli",
-   "url": "https://www.booli.se/bostad/584980",
-   "address": "Dalagatan 40A",
-   "area": "Vasastan",
-   "price": null,
-   "fee": 2560,
-   "kvm": 45,
-   "rooms": 3,
-   "floor": "vån 1",
-   "sqm_price": null,
-   "published": "2026-08-19",
-   "upcoming": false,
-   "byggar": 1886,
-   "plan": "https://bcdn.se/images/cache/45411453_1440x0.jpg",
-   "broker_url": "https://sjomanpartners.se/objekt/1873893",
-   "dm": null,
-   "tm": true,
-   "charm": [
-    "stuckatur",
-    "takhöjd",
-    "sekelskifte"
-   ],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6228377",
@@ -843,7 +1565,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6226036",
@@ -868,7 +1590,7 @@
     "takhöjd"
    ],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6225680",
@@ -899,32 +1621,7 @@
     "sekelskifte"
    ],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "booli:6224295",
-   "src": "Booli",
-   "url": "https://www.booli.se/annons/6224295",
-   "address": "Gyllenborgsgatan 12",
-   "area": "Kungsholmen",
-   "price": 3850000,
-   "fee": 3749,
-   "kvm": 43,
-   "rooms": 1,
-   "floor": "vån 3",
-   "sqm_price": null,
-   "published": "2026-08-14",
-   "upcoming": false,
-   "byggar": 1926,
-   "plan": "https://bcdn.se/images/cache/55264939_1440x0.jpg",
-   "broker_url": "https://www.maklarhuset.se/bostad/sverige/stockholm/stockholm/gyllenborgsgatan/665436",
-   "dm": null,
-   "tm": true,
-   "charm": [
-    "takhöjd"
-   ],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6222813",
@@ -947,29 +1644,7 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "booli:5914169",
-   "src": "Booli",
-   "url": "https://www.booli.se/bostad/498782",
-   "address": "Lidnersplan 12",
-   "area": "Kungsholmen",
-   "price": null,
-   "fee": 3281,
-   "kvm": 44,
-   "rooms": 1,
-   "floor": "vån 1",
-   "sqm_price": null,
-   "published": "2026-08-02",
-   "upcoming": true,
-   "dm": null,
-   "tm": null,
-   "byggar": null,
-   "plan": null,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21774181",
@@ -997,7 +1672,7 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21776526",
@@ -1027,7 +1702,7 @@
     "takhöjd"
    ],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21777916",
@@ -1049,7 +1724,7 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21777806",
@@ -1079,7 +1754,7 @@
     "sekelskifte"
    ],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21777796",
@@ -1095,12 +1770,6 @@
    "sqm_price": 125000,
    "published": "1787922637",
    "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/annons/6215659"
-    }
-   ],
    "byggar": 1927,
    "plan": "https://bilder.hemnet.se/images/itemgallery_cut/81/7a/817ad52138ff98eec9473f75f16887fe.jpg",
    "dm": null,
@@ -1109,7 +1778,7 @@
     "takhöjd"
    ],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21777722",
@@ -1140,7 +1809,7 @@
     "sekelskifte"
    ],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21777680",
@@ -1156,19 +1825,13 @@
    "sqm_price": 79762,
    "published": "1787920045",
    "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/annons/6242874"
-    }
-   ],
    "byggar": 2011,
    "plan": "https://bilder.hemnet.se/images/itemgallery_cut/ad/e4/ade4f831e5ebe3a5099bd4af07c34091.jpg",
    "dm": null,
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21771639",
@@ -1196,7 +1859,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21614157",
@@ -1218,7 +1881,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21777112",
@@ -1248,7 +1911,7 @@
     "takhöjd"
    ],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21769505",
@@ -1278,7 +1941,7 @@
     "sekelskifte"
    ],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21773540",
@@ -1294,19 +1957,13 @@
    "sqm_price": 99138,
    "published": "1787849203",
    "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/annons/6191958"
-    }
-   ],
    "byggar": 1936,
    "plan": "https://bilder.hemnet.se/images/itemgallery_cut/cf/61/cf61aea6550a1887a725f721167fbce2.jpg",
    "dm": null,
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21776699",
@@ -1328,29 +1985,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21776315",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-vastra-kungsholmen-hornsbergs-strand-stockholms-kommun-franzengatan-10-21776315",
-   "address": "Franzéngatan 10",
-   "area": "Västra Kungsholmen  - Hornsbergs strand",
-   "price": 3450000,
-   "fee": 3162,
-   "kvm": 45,
-   "rooms": 2,
-   "floor": "vån -2",
-   "sqm_price": 76667,
-   "published": "1787819345",
-   "upcoming": false,
-   "byggar": 2012,
-   "plan": null,
-   "dm": true,
-   "tm": true,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21774816",
@@ -1378,7 +2013,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21775272",
@@ -1397,6 +2032,10 @@
    "also": [
     {
      "src": "Booli",
+     "url": "https://www.booli.se/annons/6251394"
+    },
+    {
+     "src": "Booli",
      "url": "https://www.booli.se/bostad/4529352"
     }
    ],
@@ -1406,7 +2045,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21654424",
@@ -1434,7 +2073,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:18702736",
@@ -1456,35 +2095,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21774842",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-3rum-hornsbergs-strand-vastra-kungsholmen-stockholms-kommun-warfvinges-vag-3-21774842",
-   "address": "Warfvinges väg 3",
-   "area": "Hornsbergs Strand - Västra Kungsholmen",
-   "price": 5350000,
-   "fee": 3855,
-   "kvm": 59,
-   "rooms": 3,
-   "floor": "vån 4/9",
-   "sqm_price": 90678,
-   "published": "1787637115",
-   "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/bostad/485420"
-    }
-   ],
-   "byggar": 2011,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/d0/53/d0533ff99ba46b9de451885eff7e5fd8.png",
-   "dm": null,
-   "tm": true,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21774163",
@@ -1504,6 +2115,10 @@
     {
      "src": "Booli",
      "url": "https://www.booli.se/bostad/4041326"
+    },
+    {
+     "src": "Booli",
+     "url": "https://www.booli.se/annons/6158355"
     }
    ],
    "byggar": 2017,
@@ -1512,37 +2127,7 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21774168",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-hogalid-stockholms-kommun-langholmsgatan-9c-21774168",
-   "address": "Långholmsgatan 9C",
-   "area": "Södermalm/Högalid",
-   "price": 5495000,
-   "fee": 4400,
-   "kvm": 56,
-   "rooms": 2,
-   "floor": "vån 2/4",
-   "sqm_price": 98125,
-   "published": "1787564911",
-   "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/annons/6235217"
-    }
-   ],
-   "byggar": 1913,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/af/39/af39047760c98790ff78d46df34ca798.jpg",
-   "dm": null,
-   "tm": true,
-   "charm": [
-    "takhöjd"
-   ],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21774232",
@@ -1558,75 +2143,13 @@
    "sqm_price": 93222,
    "published": "1787555692",
    "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/bostad/307531"
-    }
-   ],
    "byggar": 2010,
    "plan": "https://bilder.hemnet.se/images/itemgallery_cut/3f/51/3f51c44facf0452403767bb3efbea01e.jpg",
    "dm": null,
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21773434",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-sofia-stockholms-kommun-tengdahlsgatan-42-21773434",
-   "address": "Tengdahlsgatan 42",
-   "area": "Södermalm  - Sofia",
-   "price": 4800000,
-   "fee": 4468,
-   "kvm": 51,
-   "rooms": 2,
-   "floor": "vån 5/5",
-   "sqm_price": 94118,
-   "published": "1787412258",
-   "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/bostad/20783"
-    }
-   ],
-   "dm": null,
-   "tm": null,
-   "byggar": null,
-   "plan": null,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21773998",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-1rum-vasastan-stockholms-kommun-luntmakargatan-91,-3tr-21773998",
-   "address": "Luntmakargatan 91, 3tr",
-   "area": "Vasastan",
-   "price": 4850000,
-   "fee": 3339,
-   "kvm": 51,
-   "rooms": 1,
-   "floor": "vån 3/5",
-   "sqm_price": 95098,
-   "published": "1787409118",
-   "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/annons/6231248"
-    }
-   ],
-   "byggar": 1985,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/5e/8b/5e8bcd714716ced1d3f1b7175504c715.jpg",
-   "dm": null,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21773892",
@@ -1642,12 +2165,6 @@
    "sqm_price": 87363,
    "published": "1787386994",
    "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/bostad/3931919"
-    }
-   ],
    "byggar": 1935,
    "plan": "https://bilder.hemnet.se/images/itemgallery_cut/43/76/4376e5ea6fa17df13eb3cf9b9071936d.jpg",
    "dm": null,
@@ -1656,29 +2173,7 @@
     "takhöjd"
    ],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21773538",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-reimersholme-stockholms-kommun-reimersholmsgatan-11-21773538",
-   "address": "Reimersholmsgatan 11",
-   "area": "Södermalm - Reimersholme",
-   "price": 4850000,
-   "fee": 5219,
-   "kvm": 57,
-   "rooms": 2,
-   "floor": "",
-   "sqm_price": 85088,
-   "published": "1787375065",
-   "upcoming": false,
-   "byggar": null,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/8f/cc/8fcc39de42990403306af3c815a5fc5f.png",
-   "dm": null,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21773636",
@@ -1708,7 +2203,7 @@
     "takhöjd"
    ],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21773627",
@@ -1727,16 +2222,20 @@
    "also": [
     {
      "src": "Booli",
+     "url": "https://www.booli.se/bostad/700769"
+    },
+    {
+     "src": "Booli",
      "url": "https://www.booli.se/bostad/700725"
     }
    ],
+   "byggar": 1944,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/82/07/8207b281fadfa2570db382a82a046766.png",
    "dm": null,
    "tm": null,
-   "byggar": null,
-   "plan": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21772020",
@@ -1758,13 +2257,13 @@
      "url": "https://www.booli.se/annons/6228587"
     }
    ],
+   "byggar": 1928,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/6f/08/6f0877dfd5439e3d181cda4c0df43fbc.jpg",
    "dm": null,
    "tm": null,
-   "byggar": null,
-   "plan": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21772915",
@@ -1780,19 +2279,13 @@
    "sqm_price": 88629,
    "published": "1787339305",
    "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/bostad/3954014"
-    }
-   ],
    "byggar": 1965,
    "plan": "https://bilder.hemnet.se/images/itemgallery_cut/6f/a8/6fa8aeacc2deb0f9e95f6086411c6785.png",
    "dm": null,
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21773606",
@@ -1814,13 +2307,13 @@
      "url": "https://www.booli.se/bostad/308290"
     }
    ],
-   "dm": null,
-   "tm": null,
-   "byggar": null,
-   "plan": null,
+   "byggar": 1938,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/0e/8f/0e8f02e1f52b976b47165e30a1d53ea0.jpg",
+   "dm": true,
+   "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21559793",
@@ -1842,35 +2335,7 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21772194",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-stockholms-kommun-tjustgatan-5-21772194",
-   "address": "Tjustgatan 5",
-   "area": "Södermalm",
-   "price": 5850000,
-   "fee": 2030,
-   "kvm": 57,
-   "rooms": 2,
-   "floor": "vån 6/6",
-   "sqm_price": 102632,
-   "published": "1787322600",
-   "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/bostad/79862"
-    }
-   ],
-   "byggar": 1963,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/97/7a/977a37d3d84067a2a5d194bcee4c1d26.jpg",
-   "dm": null,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21773426",
@@ -1892,65 +2357,7 @@
    "plan": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21773260",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-maria-stockholms-kommun-timmermansgatan-38b-21773260",
-   "address": "Timmermansgatan 38B",
-   "area": "Södermalm Maria",
-   "price": 5495000,
-   "fee": 3260,
-   "kvm": 50,
-   "rooms": 2,
-   "floor": "vån 1/5",
-   "sqm_price": 109900,
-   "published": "1787316787",
-   "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/annons/6187179"
-    }
-   ],
-   "byggar": 1936,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/13/ef/13efc5ebecda17df1f4b836d0daacb6d.jpg",
-   "dm": null,
-   "tm": true,
-   "charm": [
-    "takhöjd"
-   ],
-   "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21773220",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-reimersholme-stockholms-kommun-vindragarvagen-2-21773220",
-   "address": "Vindragarvägen 2",
-   "area": "Södermalm - Reimersholme",
-   "price": 5750000,
-   "fee": 4081,
-   "kvm": 60,
-   "rooms": 2,
-   "floor": "vån 2/7",
-   "sqm_price": 95041,
-   "published": "1787316558",
-   "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/bostad/3967459"
-    }
-   ],
-   "byggar": 1945,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/f8/87/f8877b4c2a61d06d991ac56d8a14a128.jpg",
-   "dm": true,
-   "tm": true,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21773016",
@@ -1978,7 +2385,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21773013",
@@ -1994,12 +2401,6 @@
    "sqm_price": 99338,
    "published": "1787311004",
    "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/annons/6232852"
-    }
-   ],
    "byggar": 1936,
    "plan": "https://bilder.hemnet.se/images/itemgallery_cut/01/a0/01a06fd900689b74ab708180a64cfddf.png",
    "dm": null,
@@ -2008,7 +2409,7 @@
     "takhöjd"
    ],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21762592",
@@ -2036,7 +2437,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21772754",
@@ -2064,121 +2465,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21772354",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-stockholms-kommun-ralambsvagen-21,-6tr-21772354",
-   "address": "Rålambsvägen 21, 6tr",
-   "area": "Kungsholmen",
-   "price": 4795000,
-   "fee": 2580,
-   "kvm": 53,
-   "rooms": 2,
-   "floor": "vån 6/7",
-   "sqm_price": 90472,
-   "published": "1787300702",
-   "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/bostad/3959831"
-    }
-   ],
-   "byggar": 1944,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/e0/e7/e0e76be791dd123f63f7ddb7cb3cebda.jpg",
-   "dm": true,
-   "tm": true,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21772434",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-stockholms-kommun-arbetargatan-29-21772434",
-   "address": "Arbetargatan 29",
-   "area": "Kungsholmen",
-   "price": 5995000,
-   "fee": 3660,
-   "kvm": 54,
-   "rooms": 2,
-   "floor": "vån 3/5",
-   "sqm_price": 111019,
-   "published": "1787300384",
-   "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/annons/6232052"
-    }
-   ],
-   "byggar": 1909,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/07/69/076934df97044f3baeadbef5911e21bf.jpg",
-   "dm": null,
-   "tm": null,
-   "charm": [
-    "takhöjd"
-   ],
-   "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21772459",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-vastra-kungsholmen-kristineberg-stockholms-kommun-hjalmar-soderbergs-vag-2-21772459",
-   "address": "Hjalmar Söderbergs väg 2",
-   "area": "Västra Kungsholmen - Kristineberg",
-   "price": 4195000,
-   "fee": 3711,
-   "kvm": 48,
-   "rooms": 2,
-   "floor": "vån 5/6",
-   "sqm_price": 87396,
-   "published": "1787296228",
-   "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/annons/6224879"
-    }
-   ],
-   "byggar": 2020,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/fb/65/fb65678ed4b81d48ce53e790b09a240c.jpg",
-   "dm": null,
-   "tm": true,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21772147",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-stockholms-kommun-timotejgatan-4,-3-tr-21772147",
-   "address": "Timotejgatan 4, 3 tr",
-   "area": "Södermalm",
-   "price": 3995000,
-   "fee": 2804,
-   "kvm": 43,
-   "rooms": 2,
-   "floor": "vån 3/3",
-   "sqm_price": 92907,
-   "published": "1787233092",
-   "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/bostad/565936"
-    }
-   ],
-   "byggar": 1930,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/80/09/8009665c4c0f6b77a0fdd01347b2a865.png",
-   "dm": null,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21770421",
@@ -2206,69 +2493,13 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21770091",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-stockholms-kommun-alstromergatan-49-21770091",
-   "address": "Alströmergatan 49",
-   "area": "Kungsholmen",
-   "price": 5395000,
-   "fee": 4101,
-   "kvm": 47,
-   "rooms": 2,
-   "floor": "vån 5/5",
-   "sqm_price": 114787,
-   "published": "1787154825",
-   "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/bostad/469154"
-    }
-   ],
-   "dm": null,
-   "tm": null,
-   "byggar": null,
-   "plan": null,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21770505",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-stockholms-kommun-industrigatan-7a-21770505",
-   "address": "Industrigatan 7A",
-   "area": "Kungsholmen",
-   "price": 3895000,
-   "fee": 3325,
-   "kvm": 42,
-   "rooms": 2,
-   "floor": "vån 2",
-   "sqm_price": 92738,
-   "published": "1787154160",
-   "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/annons/6207845"
-    }
-   ],
-   "byggar": 1941,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/00/ea/00ea93177b873327c16ccadb70205a70.jpg",
-   "dm": null,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21771319",
    "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2,5rum-fridhemsplan-stockholms-kommun-ola-hanssons-gatan-6,-van-4-21771319",
-   "address": "Ola Hanssons gatan 6, vån 4",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2,5rum-fridhemsplan-stockholms-kommun-ola-hanssonsgatan-6,-van-4-21771319",
+   "address": "Ola Hanssonsgatan 6, vån 4",
    "area": "Fridhemsplan",
    "price": 3995000,
    "fee": 4457,
@@ -2281,7 +2512,7 @@
    "also": [
     {
      "src": "Booli",
-     "url": "https://www.booli.se/annons/6202884"
+     "url": "https://www.booli.se/bostad/371999"
     }
    ],
    "byggar": null,
@@ -2290,29 +2521,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21765395",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-stockholms-kommun-fatburs-brunnsgata-26-21765395",
-   "address": "Fatburs Brunnsgata 26",
-   "area": "Södermalm",
-   "price": 5995000,
-   "fee": 4103,
-   "kvm": 61,
-   "rooms": 2,
-   "floor": "vån 3/8",
-   "sqm_price": 98279,
-   "published": "1787054331",
-   "upcoming": false,
-   "byggar": null,
-   "plan": null,
-   "dm": null,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21769614",
@@ -2340,7 +2549,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21768554",
@@ -2370,35 +2579,7 @@
     "takhöjd"
    ],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21763669",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-stockholms-kommun-stagneliusvagen-32-21763669",
-   "address": "Stagneliusvägen 32",
-   "area": "Kungsholmen",
-   "price": 3695000,
-   "fee": 3875,
-   "kvm": 48,
-   "rooms": 2,
-   "floor": "vån 2/4",
-   "sqm_price": 76979,
-   "published": "1786709630",
-   "upcoming": false,
-   "also": [
-    {
-     "src": "Booli",
-     "url": "https://www.booli.se/bostad/745434"
-    }
-   ],
-   "byggar": 1939,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/86/ba/86ba2c20631dcbd00e6bd88b3a40620d.jpg",
-   "dm": true,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21767387",
@@ -2420,31 +2601,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
-   "new": true
-  },
-  {
-   "id": "hemnet:21650693",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-hornstull-stockholms-kommun-bergsundsgatan-16-21650693",
-   "address": "Bergsundsgatan 16",
-   "area": "Södermalm - Hornstull",
-   "price": 5650000,
-   "fee": 4987,
-   "kvm": 57,
-   "rooms": 2,
-   "floor": "vån 1/5",
-   "sqm_price": 99123,
-   "published": "1764860296",
-   "upcoming": false,
-   "byggar": 1939,
-   "plan": null,
-   "dm": null,
-   "tm": null,
-   "charm": [
-    "takhöjd"
-   ],
-   "first_seen": "2026-08-29",
-   "new": true
+   "new": false
   },
   {
    "id": "booli:6221104",
@@ -2469,29 +2626,6 @@
     "takhöjd",
     "sekelskifte"
    ],
-   "first_seen": "2026-08-13",
-   "new": false
-  },
-  {
-   "id": "booli:6218132",
-   "src": "Booli",
-   "url": "https://www.booli.se/annons/6218132",
-   "address": "Kronobergsgatan 25",
-   "area": "Kungsholmen",
-   "price": 5500000,
-   "fee": 3368,
-   "kvm": 45,
-   "rooms": 2,
-   "floor": "vån 5",
-   "sqm_price": null,
-   "published": "2026-08-10",
-   "upcoming": true,
-   "byggar": null,
-   "plan": null,
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S13590/OBJ5PGGLTG2JFQ3RWGLBK/Booli",
-   "dm": null,
-   "tm": null,
-   "charm": [],
    "first_seen": "2026-08-13",
    "new": false
   },
@@ -2569,55 +2703,6 @@
    "new": false
   },
   {
-   "id": "booli:6214573",
-   "src": "Booli",
-   "url": "https://www.booli.se/bostad/566423",
-   "address": "Ernst Ahlgrens väg 6",
-   "area": "Fredhäll",
-   "price": null,
-   "fee": 2982,
-   "kvm": 40,
-   "rooms": 2,
-   "floor": "vån 1",
-   "sqm_price": null,
-   "published": "2026-08-06",
-   "upcoming": true,
-   "byggar": 1931,
-   "plan": "https://bcdn.se/images/cache/55064030_1440x0.jpg",
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S13661/OBJ5PNDKFR2MFWPCVFMBQ/Booli",
-   "dm": null,
-   "tm": true,
-   "charm": [],
-   "first_seen": "2026-08-13",
-   "new": false
-  },
-  {
-   "id": "booli:6182896",
-   "src": "Booli",
-   "url": "https://www.booli.se/annons/6182896",
-   "address": "Fridhemsgatan 64A",
-   "area": "Kungsholmen",
-   "price": null,
-   "fee": 4069,
-   "kvm": 48,
-   "rooms": 2,
-   "floor": "vån 3",
-   "sqm_price": null,
-   "published": "2026-08-05",
-   "upcoming": true,
-   "byggar": 1903,
-   "plan": null,
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/M22127/OBJ5PDHCP93289KGK69BD/Booli",
-   "dm": true,
-   "tm": true,
-   "charm": [
-    "takhöjd",
-    "sekelskifte"
-   ],
-   "first_seen": "2026-08-13",
-   "new": false
-  },
-  {
    "id": "booli:6211077",
    "src": "Booli",
    "url": "https://www.booli.se/annons/6211077",
@@ -2637,32 +2722,6 @@
    "dm": true,
    "tm": true,
    "charm": [],
-   "first_seen": "2026-08-13",
-   "new": false
-  },
-  {
-   "id": "booli:6193388",
-   "src": "Booli",
-   "url": "https://www.booli.se/bostad/3886607",
-   "address": "Birger Jarlsgatan 93B",
-   "area": "Vasastan",
-   "price": null,
-   "fee": 2493,
-   "kvm": 50,
-   "rooms": 2,
-   "floor": "vån 2",
-   "sqm_price": null,
-   "published": "2026-07-09",
-   "upcoming": true,
-   "byggar": 1912,
-   "plan": "https://bcdn.se/images/cache/54680603_1440x0.jpg",
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/M21183/OBJ5PKKKCL2Z2KC4NFBBK/Booli",
-   "dm": true,
-   "tm": null,
-   "charm": [
-    "takhöjd",
-    "sekelskifte"
-   ],
    "first_seen": "2026-08-13",
    "new": false
   },
@@ -2774,100 +2833,75 @@
    "new": false
   },
   {
-   "id": "booli:6126466",
+   "id": "booli:6176489",
    "src": "Booli",
-   "url": "https://www.booli.se/bostad/142789",
-   "address": "Fridhemsgatan 14A",
+   "url": "https://www.booli.se/bostad/745320",
+   "address": "Stagneliusvägen 23",
    "area": "Kungsholmen",
-   "price": null,
-   "fee": 3322,
-   "kvm": 41,
+   "price": 4495000,
+   "fee": 4191,
+   "kvm": 47,
    "rooms": 2,
    "floor": "vån 5",
    "sqm_price": null,
-   "published": "2026-08-28",
+   "published": "2026-09-04",
    "upcoming": false,
-   "byggar": 1927,
-   "plan": "https://bcdn.se/images/cache/53475975_1440x0.jpg",
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S13989/OBJ5PCDP5S2MTMLQQ82BZ/Booli",
-   "dm": true,
-   "tm": true,
-   "charm": [
-    "takhöjd"
-   ],
-   "first_seen": "2026-08-02",
-   "new": false
-  },
-  {
-   "id": "booli:6162277",
-   "src": "Booli",
-   "url": "https://www.booli.se/annons/6162277",
-   "address": "Rålambsvägen 52",
-   "area": "Kungsholmen",
-   "price": 3850000,
-   "fee": 2952,
-   "kvm": 41,
-   "rooms": 2,
-   "floor": "vån 1",
-   "sqm_price": null,
-   "published": "2026-08-22",
-   "upcoming": false,
-   "byggar": 1931,
-   "plan": null,
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/M22127/OBJ5PG2JS332897LKBKBX/Booli",
+   "byggar": 1937,
+   "plan": "https://bcdn.se/images/cache/54413827_1440x0.jpg",
+   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S13661/CMBOLGH5M4JKKF9HPBE37QN/Booli",
    "dm": null,
    "tm": null,
    "charm": [
-    "takhöjd"
+    "sekelskifte"
    ],
    "first_seen": "2026-08-02",
    "new": false
   },
   {
-   "id": "booli:6209449",
+   "id": "booli:6051259",
    "src": "Booli",
-   "url": "https://www.booli.se/bostad/759241",
-   "address": "Sysslomansgatan 8",
-   "area": "Kungsholmen",
-   "price": 3995000,
-   "fee": 2508,
-   "kvm": 41,
-   "rooms": 1,
-   "floor": "vån 3",
+   "url": "https://www.booli.se/bostad/127538",
+   "address": "Repslagargatan 25",
+   "area": "Södermalm",
+   "price": null,
+   "fee": 1958,
+   "kvm": 47,
+   "rooms": 2,
+   "floor": "vån 4",
    "sqm_price": null,
-   "published": "2026-08-18",
+   "published": "2026-09-01",
    "upcoming": false,
-   "byggar": 1938,
-   "plan": "https://bcdn.se/images/cache/54955604_1440x0.jpg",
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S8437/OBJ5PHFLLS2GRZC7ZXDB8/Booli",
+   "byggar": 1983,
+   "plan": "https://bcdn.se/images/cache/51998348_1440x0.jpg",
+   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/M22127/OBJ5NXTWNV3289LHJKJBR/Booli",
    "dm": true,
+   "tm": true,
+   "charm": [],
+   "first_seen": "2026-08-02",
+   "new": false
+  },
+  {
+   "id": "booli:6028606",
+   "src": "Booli",
+   "url": "https://www.booli.se/annons/6028606",
+   "address": "Gävlegatan 26",
+   "area": "Vasastan",
+   "price": null,
+   "fee": 2310,
+   "kvm": 42,
+   "rooms": 2,
+   "floor": "",
+   "sqm_price": null,
+   "published": "2026-08-31",
+   "upcoming": true,
+   "byggar": 2017,
+   "plan": null,
+   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S12245/CMBOLGH5H436UEOR1B0LIHM/Booli",
+   "dm": null,
    "tm": true,
    "charm": [
     "takhöjd"
    ],
-   "first_seen": "2026-08-02",
-   "new": false
-  },
-  {
-   "id": "booli:6203877",
-   "src": "Booli",
-   "url": "https://www.booli.se/bostad/136201",
-   "address": "John Ericssonsgatan 6",
-   "area": "Kungsholmen",
-   "price": 5695000,
-   "fee": 3183,
-   "kvm": 45,
-   "rooms": 2,
-   "floor": "vån 3",
-   "sqm_price": null,
-   "published": "2026-08-14",
-   "upcoming": false,
-   "byggar": 1935,
-   "plan": "https://bcdn.se/images/cache/54853665_1440x0.jpg",
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S8437/CMBOLGH5H8QSMISI1PVBAAP/Booli",
-   "dm": true,
-   "tm": true,
-   "charm": [],
    "first_seen": "2026-08-02",
    "new": false
   },
@@ -3092,81 +3126,6 @@
    "new": false
   },
   {
-   "id": "booli:6190441",
-   "src": "Booli",
-   "url": "https://www.booli.se/bostad/709957",
-   "address": "Ringvägen 87B",
-   "area": "Södermalm",
-   "price": null,
-   "fee": 2520,
-   "kvm": 50,
-   "rooms": 2,
-   "floor": "vån 3",
-   "sqm_price": null,
-   "published": "2026-07-06",
-   "upcoming": true,
-   "byggar": 1934,
-   "plan": "https://bcdn.se/images/cache/54631457_1440x0.jpg",
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/M17629/OBJ5PFL5QR2SHMK5FTJB1/Booli",
-   "dm": null,
-   "tm": null,
-   "charm": [
-    "takhöjd"
-   ],
-   "first_seen": "2026-08-02",
-   "new": false
-  },
-  {
-   "id": "booli:6176489",
-   "src": "Booli",
-   "url": "https://www.booli.se/bostad/745320",
-   "address": "Stagneliusvägen 23",
-   "area": "Kungsholmen",
-   "price": null,
-   "fee": 4191,
-   "kvm": 47,
-   "rooms": 2,
-   "floor": "vån 5",
-   "sqm_price": null,
-   "published": "2026-06-23",
-   "upcoming": true,
-   "byggar": 1937,
-   "plan": "https://bcdn.se/images/cache/54413827_1440x0.jpg",
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S13661/CMBOLGH5M4JKKF9HPBE37QN/Booli",
-   "dm": null,
-   "tm": null,
-   "charm": [
-    "sekelskifte"
-   ],
-   "first_seen": "2026-08-02",
-   "new": false
-  },
-  {
-   "id": "booli:6028606",
-   "src": "Booli",
-   "url": "https://www.booli.se/annons/6028606",
-   "address": "Gävlegatan 26",
-   "area": "Vasastan",
-   "price": null,
-   "fee": 2310,
-   "kvm": 42,
-   "rooms": 2,
-   "floor": "",
-   "sqm_price": null,
-   "published": "2026-06-23",
-   "upcoming": true,
-   "byggar": 2017,
-   "plan": null,
-   "broker_url": "https://connect-resolve.maklare.vitec.net/Description/S12245/CMBOLGH5H436UEOR1B0LIHM/Booli",
-   "dm": null,
-   "tm": true,
-   "charm": [
-    "takhöjd"
-   ],
-   "first_seen": "2026-08-02",
-   "new": false
-  },
-  {
    "id": "booli:6174716",
    "src": "Booli",
    "url": "https://www.booli.se/bostad/4005972",
@@ -3192,25 +3151,96 @@
    "new": false
   },
   {
-   "id": "booli:6170457",
+   "id": "booli:5953598",
    "src": "Booli",
-   "url": "https://www.booli.se/annons/6170457",
-   "address": "Kungsbro Strand 17",
-   "area": "Kungsholmen",
-   "price": 3995000,
-   "fee": 5149,
-   "kvm": 40,
-   "rooms": 2,
-   "floor": "",
+   "url": "https://www.booli.se/annons/5953598",
+   "address": "Norrtullsgatan 36",
+   "area": "Vasastan",
+   "price": null,
+   "fee": 3490,
+   "kvm": 48,
+   "rooms": 3,
+   "floor": "vån 5",
    "sqm_price": null,
-   "published": "2026-06-17",
-   "upcoming": false,
+   "published": "2026-06-13",
+   "upcoming": true,
    "byggar": null,
-   "plan": "https://bcdn.se/images/cache/54309304_1440x0.jpg",
-   "broker_url": "https://www.maklarhuset.se/bostad/sverige/stockholm/stockholm/kungsbro-strand/663357",
+   "plan": "https://bcdn.se/images/cache/49609714_1440x0.jpg",
+   "broker_url": "https://www.svenskfast.se/bostadsratt/stockholm/stockholm/stockholm/vasastan/norrtullsgatan-36/443534/",
+   "dm": null,
+   "tm": true,
+   "charm": [],
+   "first_seen": "2026-08-02",
+   "new": false
+  },
+  {
+   "id": "booli:6162148",
+   "src": "Booli",
+   "url": "https://www.booli.se/bostad/672233",
+   "address": "Marmorgatan 5",
+   "area": "Södermalm",
+   "price": null,
+   "fee": 4620,
+   "kvm": 53,
+   "rooms": 2,
+   "floor": "vån 3",
+   "sqm_price": null,
+   "published": "2026-06-11",
+   "upcoming": true,
+   "byggar": 1950,
+   "plan": "https://bcdn.se/images/cache/54173784_1440x0.jpg",
+   "broker_url": "https://www.erikolsson.se/bostader-till-salu/OBJ20341_2145012348",
    "dm": true,
    "tm": true,
    "charm": [],
+   "first_seen": "2026-08-02",
+   "new": false
+  },
+  {
+   "id": "booli:6159772",
+   "src": "Booli",
+   "url": "https://www.booli.se/bostad/572537",
+   "address": "Fatburs Kvarngata 24",
+   "area": "Södermalm",
+   "price": null,
+   "fee": 4658,
+   "kvm": 59,
+   "rooms": 2,
+   "floor": "vån 2",
+   "sqm_price": null,
+   "published": "2026-06-10",
+   "upcoming": true,
+   "byggar": 1991,
+   "plan": "https://bcdn.se/images/cache/54133548_1440x0.jpg",
+   "broker_url": "https://www.maklarhuset.se/bostad/sverige/stockholm/stockholm/fatburs-kvarngata/667169",
+   "dm": null,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-08-02",
+   "new": false
+  },
+  {
+   "id": "booli:6158320",
+   "src": "Booli",
+   "url": "https://www.booli.se/annons/6158320",
+   "address": "Lustgårdsgatan 20",
+   "area": "Kungsholmen",
+   "price": 4495000,
+   "fee": 2700,
+   "kvm": 46,
+   "rooms": 2,
+   "floor": "vån 8",
+   "sqm_price": null,
+   "published": "2026-06-09",
+   "upcoming": false,
+   "byggar": null,
+   "plan": "https://bcdn.se/images/cache/54109872_1440x0.jpg",
+   "broker_url": "https://diplomat.hazemalkhodary.com/redirectCollectionUrl?dealId=MDAxNXwwMDAwMDAwMzY2MXw1OA..",
+   "dm": true,
+   "tm": true,
+   "charm": [
+    "takhöjd"
+   ],
    "first_seen": "2026-08-02",
    "new": false
   },
@@ -3259,28 +3289,6 @@
    "new": false
   },
   {
-   "id": "hemnet:21732702",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-stockholms-kommun-nordenflychtsvagen-66-21732702",
-   "address": "Nordenflychtsvägen 66",
-   "area": "Stockholm",
-   "price": 4095000,
-   "fee": 3653,
-   "kvm": 41,
-   "rooms": 2,
-   "floor": "vån 5",
-   "sqm_price": 99878,
-   "published": "1785401739",
-   "upcoming": false,
-   "byggar": null,
-   "plan": null,
-   "dm": null,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-08-02",
-   "new": false
-  },
-  {
    "id": "hemnet:21759305",
    "src": "Hemnet",
    "url": "https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-stockholms-kommun-pipersgatan-16-21759305",
@@ -3301,28 +3309,6 @@
    "charm": [
     "spegeldörrar"
    ],
-   "first_seen": "2026-08-02",
-   "new": false
-  },
-  {
-   "id": "hemnet:21687583",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-1,5rum-sodermalm-maria-hogalid-stockholms-kommun-fatburs-kvarngata-28-21687583",
-   "address": "Fatburs Kvarngata 28",
-   "area": "Södermalm - Maria Högalid",
-   "price": 4000000,
-   "fee": 3903,
-   "kvm": 48,
-   "rooms": 1,
-   "floor": "",
-   "sqm_price": 83333,
-   "published": "1778943740",
-   "upcoming": false,
-   "byggar": 1991,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/bf/37/bf37ae639ec03b48aa66ec9d8e6e13d5.jpg",
-   "dm": null,
-   "tm": true,
-   "charm": [],
    "first_seen": "2026-08-02",
    "new": false
   },
