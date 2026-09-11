@@ -1,5 +1,5 @@
 {
- "updated": "2026-09-10",
+ "updated": "2026-09-11",
  "items": [
   {
    "id": "hemnet:21784107",
@@ -21,7 +21,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-09-10",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21781435",
@@ -43,7 +43,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-09-10",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21783694",
@@ -67,7 +67,7 @@
     "takhöjd"
    ],
    "first_seen": "2026-09-10",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21783074",
@@ -89,7 +89,7 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-09-10",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21782914",
@@ -111,7 +111,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-09-10",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21781691",
@@ -133,7 +133,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-09-10",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21782735",
@@ -155,7 +155,7 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-09-10",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21782497",
@@ -433,28 +433,6 @@
    "new": false
   },
   {
-   "id": "hemnet:21778647",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-hogalid-stockholms-kommun-jagargatan-3,-2-tr-21778647",
-   "address": "Jägargatan 3, 2 tr",
-   "area": "Södermalm - Högalid",
-   "price": 3995000,
-   "fee": 2410,
-   "kvm": 43,
-   "rooms": 2,
-   "floor": "vån 1",
-   "sqm_price": 91839,
-   "published": "1788111244",
-   "upcoming": false,
-   "byggar": null,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/67/cf/67cf9fd5a6afddf6b9be03515927f072.jpg",
-   "dm": null,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-09-05",
-   "new": false
-  },
-  {
    "id": "hemnet:21778547",
    "src": "Hemnet",
    "url": "https://www.hemnet.se/bostad/lagenhet-2rum-tegnerlunden-stockholms-kommun-teknologgatan-9d-21778547",
@@ -502,28 +480,6 @@
    "new": false
   },
   {
-   "id": "hemnet:21771639",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-marieberg-stockholms-kommun-fyrverkarbacken-23,-4-tr-21771639",
-   "address": "Fyrverkarbacken 23, 4 tr",
-   "area": "Kungsholmen - Marieberg",
-   "price": 4995000,
-   "fee": 4853,
-   "kvm": 55,
-   "rooms": 2,
-   "floor": "vån 4/16",
-   "sqm_price": 90818,
-   "published": "1787917202",
-   "upcoming": false,
-   "byggar": 1962,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/c3/8f/c38f03903cd2eb1753065abdf4d109e2.jpg",
-   "dm": null,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": false
-  },
-  {
    "id": "hemnet:21614157",
    "src": "Hemnet",
    "url": "https://www.hemnet.se/bostad/lagenhet-2rum-vastra-kungsholmen-stockholms-kommun-kellgrensgatan-21614157",
@@ -540,28 +496,6 @@
    "byggar": null,
    "plan": null,
    "dm": true,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-08-29",
-   "new": false
-  },
-  {
-   "id": "hemnet:21776699",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-stockholms-kommun-polhemsgatan-34-21776699",
-   "address": "Polhemsgatan 34",
-   "area": "Kungsholmen",
-   "price": 4495000,
-   "fee": 4600,
-   "kvm": 56,
-   "rooms": 2,
-   "floor": "",
-   "sqm_price": 80268,
-   "published": "1787845513",
-   "upcoming": false,
-   "byggar": 1997,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/e2/6b/e26b4b4d8481b313edc85913cf5eeabf.jpg",
-   "dm": null,
    "tm": null,
    "charm": [],
    "first_seen": "2026-08-29",
@@ -834,30 +768,6 @@
    "new": false
   },
   {
-   "id": "hemnet:21764406",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen,-kristineberg-stockholms-kommun-love-almqvists-vag-4b-21764406",
-   "address": "Love Almqvists väg 4B",
-   "area": "Kungsholmen",
-   "price": 3495000,
-   "fee": 4155,
-   "kvm": 44,
-   "rooms": 2,
-   "floor": "vån 1,5/5",
-   "sqm_price": 79432,
-   "published": "1786098801",
-   "upcoming": false,
-   "byggar": 1935,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/a8/9c/a89c0073a0a324f99ddf4e9c921e8291.jpg",
-   "dm": null,
-   "tm": null,
-   "charm": [
-    "takhöjd"
-   ],
-   "first_seen": "2026-08-13",
-   "new": false
-  },
-  {
    "id": "hemnet:21716185",
    "src": "Hemnet",
    "url": "https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-hornsbergs-strand-stockholms-kommun-franzengatan-16,-4tr-21716185",
@@ -919,28 +829,6 @@
    "upcoming": false,
    "byggar": 1934,
    "plan": "https://bilder.hemnet.se/images/itemgallery_cut/97/f4/97f4290b6998ae55f1071c257579ac01.jpg",
-   "dm": null,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-08-02",
-   "new": false
-  },
-  {
-   "id": "hemnet:21709535",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-stockholms-kommun-emelies-gata-10-21709535",
-   "address": "Emelies gata 10",
-   "area": "Södermalm",
-   "price": 5795000,
-   "fee": 3833,
-   "kvm": 44,
-   "rooms": 2,
-   "floor": "vån 4",
-   "sqm_price": 131705,
-   "published": "1786462831",
-   "upcoming": false,
-   "byggar": null,
-   "plan": null,
    "dm": null,
    "tm": null,
    "charm": [],
