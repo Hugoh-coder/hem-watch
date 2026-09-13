@@ -1,6 +1,119 @@
 {
- "updated": "2026-09-12",
+ "updated": "2026-09-13",
  "items": [
+  {
+   "id": "hemnet:21784929",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-3rum-sodermalm-stockholms-kommun-fatburs-kvarngata-17-21784929",
+   "address": "Fatburs Kvarngata 17",
+   "area": "Södermalm",
+   "price": 5995000,
+   "fee": 5439,
+   "kvm": 71,
+   "rooms": 3,
+   "floor": "vån 1/7",
+   "sqm_price": 84437,
+   "published": "1789236470",
+   "upcoming": false,
+   "byggar": 1991,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/e0/f0/e0f096b67f1b5045fd65a3a9b3f4de64.jpg",
+   "dm": null,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-13",
+   "new": true
+  },
+  {
+   "id": "hemnet:21787092",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-stockholms-kommun-heleneborgsgatan-38-21787092",
+   "address": "Heleneborgsgatan 38",
+   "area": "Södermalm",
+   "price": 4750000,
+   "fee": 1996,
+   "kvm": 43,
+   "rooms": 2,
+   "floor": "vån 2",
+   "sqm_price": 110465,
+   "published": "1789234164",
+   "upcoming": false,
+   "byggar": 1929,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/66/c5/66c5571b834051e8f5394c2059089019.jpg",
+   "dm": null,
+   "tm": true,
+   "charm": [
+    "spegeldörrar",
+    "takhöjd"
+   ],
+   "first_seen": "2026-09-13",
+   "new": true
+  },
+  {
+   "id": "hemnet:21786693",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-1,5rum-sodermalm-nytorget-stockholms-kommun-brannerigatan-5,-3tr-21786693",
+   "address": "Brännerigatan 5, 3tr",
+   "area": "Södermalm - Nytorget",
+   "price": 5695000,
+   "fee": 3205,
+   "kvm": 52,
+   "rooms": 1,
+   "floor": "vån 3/4",
+   "sqm_price": 109519,
+   "published": "1789209264",
+   "upcoming": false,
+   "dm": null,
+   "tm": null,
+   "byggar": null,
+   "plan": null,
+   "charm": [],
+   "first_seen": "2026-09-13",
+   "new": true
+  },
+  {
+   "id": "hemnet:21786990",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-reimersholme-stockholms-kommun-reimersholmsgatan-32-21786990",
+   "address": "Reimersholmsgatan 32",
+   "area": "Reimersholme",
+   "price": 4500000,
+   "fee": 3081,
+   "kvm": 44,
+   "rooms": 2,
+   "floor": "vån 2/3",
+   "sqm_price": 102273,
+   "published": "1789204557",
+   "upcoming": false,
+   "byggar": 1946,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/14/a7/14a7e80bb9e969564f321c11a0a23c8d.jpg",
+   "dm": null,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-13",
+   "new": true
+  },
+  {
+   "id": "hemnet:21786982",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-3rum-sodermalm-stockholms-kommun-tullgardsgatan-16,-pl4-21786982",
+   "address": "Tullgårdsgatan 16, pl4",
+   "area": "Södermalm",
+   "price": 5795000,
+   "fee": 6529,
+   "kvm": 79,
+   "rooms": 3,
+   "floor": "vån 4",
+   "sqm_price": 73354,
+   "published": "1789202357",
+   "upcoming": false,
+   "byggar": null,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/a0/a0/a0a0adede24f0ee5e1b91650410a1854.jpg",
+   "dm": null,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-13",
+   "new": true
+  },
   {
    "id": "hemnet:21786381",
    "src": "Hemnet",
@@ -21,7 +134,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-09-12",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21786354",
@@ -45,7 +158,7 @@
     "takhöjd"
    ],
    "first_seen": "2026-09-12",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21786485",
@@ -61,13 +174,17 @@
    "sqm_price": 106277,
    "published": "1789142831",
    "upcoming": false,
-   "dm": null,
-   "tm": null,
-   "byggar": null,
-   "plan": null,
-   "charm": [],
+   "byggar": 1909,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/db/35/db35d740196f229022efcd19f6d071fb.jpg",
+   "dm": true,
+   "tm": true,
+   "charm": [
+    "spegeldörrar",
+    "takhöjd",
+    "sekelskifte"
+   ],
    "first_seen": "2026-09-12",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21786500",
@@ -91,7 +208,7 @@
     "takhöjd"
    ],
    "first_seen": "2026-09-12",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21786638",
@@ -113,7 +230,7 @@
    "tm": true,
    "charm": [],
    "first_seen": "2026-09-12",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21786427",
@@ -141,7 +258,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-09-12",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21785117",
@@ -165,7 +282,7 @@
     "takhöjd"
    ],
    "first_seen": "2026-09-12",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21785816",
@@ -187,7 +304,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-09-12",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21767391",
@@ -209,7 +326,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-09-12",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21766797",
@@ -233,7 +350,7 @@
     "takhöjd"
    ],
    "first_seen": "2026-09-12",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21784107",
@@ -776,30 +893,6 @@
    "dm": null,
    "tm": true,
    "charm": [],
-   "first_seen": "2026-08-29",
-   "new": false
-  },
-  {
-   "id": "hemnet:21773636",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-nytorget-stockholms-kommun-kocksgatan-55-21773636",
-   "address": "Kocksgatan 55",
-   "area": "Södermalm - Nytorget",
-   "price": 5750000,
-   "fee": 2119,
-   "kvm": 50,
-   "rooms": 2,
-   "floor": "vån 3/3",
-   "sqm_price": 115000,
-   "published": "1787356491",
-   "upcoming": false,
-   "byggar": 1939,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/6b/d5/6bd51631dd43744dc13e388535eb0f06.png",
-   "dm": null,
-   "tm": null,
-   "charm": [
-    "takhöjd"
-   ],
    "first_seen": "2026-08-29",
    "new": false
   },
