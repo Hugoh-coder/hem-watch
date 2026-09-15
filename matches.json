@@ -1,6 +1,50 @@
 {
- "updated": "2026-09-13",
+ "updated": "2026-09-15",
  "items": [
+  {
+   "id": "hemnet:21742205",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-stockholms-kommun-kellgrensgatan-21742205",
+   "address": "Kellgrensgatan",
+   "area": "Stockholm",
+   "price": 4095000,
+   "fee": 3589,
+   "kvm": 43,
+   "rooms": 2,
+   "floor": "vån 3",
+   "sqm_price": 95233,
+   "published": "1789383913",
+   "upcoming": false,
+   "byggar": null,
+   "plan": null,
+   "dm": true,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-15",
+   "new": true
+  },
+  {
+   "id": "hemnet:21787201",
+   "src": "Hemnet",
+   "url": "https://www.hemnet.se/bostad/lagenhet-1rum-birkastan-vasastan-stockholms-kommun-rorstrandsgatan-15,-1-tr-21787201",
+   "address": "Rörstrandsgatan 15, 1½tr",
+   "area": "Birkastan - Vasastan",
+   "price": 5475000,
+   "fee": 2200,
+   "kvm": 40,
+   "rooms": 1,
+   "floor": "vån 1/6",
+   "sqm_price": 136875,
+   "published": "1789316913",
+   "upcoming": false,
+   "byggar": 1928,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/ee/bd/eebdc88b0dda2eae5daae3c6268515c2.jpg",
+   "dm": null,
+   "tm": null,
+   "charm": [],
+   "first_seen": "2026-09-15",
+   "new": true
+  },
   {
    "id": "hemnet:21784929",
    "src": "Hemnet",
@@ -21,7 +65,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-09-13",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21787092",
@@ -46,7 +90,7 @@
     "takhöjd"
    ],
    "first_seen": "2026-09-13",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21786693",
@@ -62,13 +106,16 @@
    "sqm_price": 109519,
    "published": "1789209264",
    "upcoming": false,
+   "byggar": 1926,
+   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/8c/03/8c03dd0eb94f8794439316a0d362fee9.png",
    "dm": null,
    "tm": null,
-   "byggar": null,
-   "plan": null,
-   "charm": [],
+   "charm": [
+    "spegeldörrar",
+    "takhöjd"
+   ],
    "first_seen": "2026-09-13",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21786990",
@@ -90,7 +137,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-09-13",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21786982",
@@ -112,7 +159,7 @@
    "tm": null,
    "charm": [],
    "first_seen": "2026-09-13",
-   "new": true
+   "new": false
   },
   {
    "id": "hemnet:21786381",
@@ -163,13 +210,13 @@
   {
    "id": "hemnet:21786485",
    "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-sodermalm-mariatorget-stockholms-kommun-hornsgatan-64b-21786485",
+   "url": "https://www.hemnet.se/bostad/lagenhet-1,5rum-sodermalm-mariatorget-stockholms-kommun-hornsgatan-64b-21786485",
    "address": "Hornsgatan 64B",
    "area": "Södermalm - Mariatorget",
    "price": 4995000,
    "fee": 991,
    "kvm": 47,
-   "rooms": 2,
+   "rooms": 1,
    "floor": "vån 4/6",
    "sqm_price": 106277,
    "published": "1789142831",
@@ -301,28 +348,6 @@
    "byggar": 1927,
    "plan": "https://bilder.hemnet.se/images/itemgallery_cut/3d/f6/3df6def548b5fa104ff8a45580bc3e2d.jpg",
    "dm": null,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-09-12",
-   "new": false
-  },
-  {
-   "id": "hemnet:21767391",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-stockholms-kommun-kellgrensgatan-21767391",
-   "address": "Kellgrensgatan",
-   "area": "Stockholm",
-   "price": 4295000,
-   "fee": 3751,
-   "kvm": 47,
-   "rooms": 2,
-   "floor": "vån 3",
-   "sqm_price": 91383,
-   "published": "1789122634",
-   "upcoming": false,
-   "byggar": null,
-   "plan": null,
-   "dm": true,
    "tm": null,
    "charm": [],
    "first_seen": "2026-09-12",
@@ -716,30 +741,6 @@
    "new": false
   },
   {
-   "id": "hemnet:21779859",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-kungsholmen-stockholms-kommun-fridhemsgatan-14a-21779859",
-   "address": "Fridhemsgatan 14A",
-   "area": "Kungsholmen",
-   "price": 4800000,
-   "fee": 3322,
-   "kvm": 41,
-   "rooms": 2,
-   "floor": "vån 5/6",
-   "sqm_price": 117073,
-   "published": "1788275850",
-   "upcoming": false,
-   "byggar": 1927,
-   "plan": "https://bilder.hemnet.se/images/itemgallery_cut/24/e2/24e28f6913fd46d30f75fd95349ec6ae.jpg",
-   "dm": true,
-   "tm": null,
-   "charm": [
-    "takhöjd"
-   ],
-   "first_seen": "2026-09-05",
-   "new": false
-  },
-  {
    "id": "hemnet:21774418",
    "src": "Hemnet",
    "url": "https://www.hemnet.se/bostad/lagenhet-2rum-stockholm-stockholms-kommun-anders-reimers-vag-13-21774418",
@@ -806,28 +807,6 @@
     "sekelskifte"
    ],
    "first_seen": "2026-09-05",
-   "new": false
-  },
-  {
-   "id": "hemnet:21614157",
-   "src": "Hemnet",
-   "url": "https://www.hemnet.se/bostad/lagenhet-2rum-vastra-kungsholmen-stockholms-kommun-kellgrensgatan-21614157",
-   "address": "Kellgrensgatan",
-   "area": "Västra Kungsholmen",
-   "price": 4095000,
-   "fee": 3589,
-   "kvm": 43,
-   "rooms": 2,
-   "floor": "vån 3",
-   "sqm_price": 95233,
-   "published": "1787906688",
-   "upcoming": false,
-   "byggar": null,
-   "plan": null,
-   "dm": true,
-   "tm": null,
-   "charm": [],
-   "first_seen": "2026-08-29",
    "new": false
   },
   {
